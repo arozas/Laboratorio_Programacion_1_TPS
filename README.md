@@ -1,2 +1,2 @@
-# Laboratorio_Programacion_1_TPS
+# tp_laboratorio_1
 Trabajos Prácticos Laboratorio 1 - UTN - Programación
