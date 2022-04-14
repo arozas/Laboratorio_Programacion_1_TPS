@@ -1,0 +1,77 @@
+/*
+ * utn_tp1.c
+ *
+ *  Created on: 13 abr. 2022
+ *  Author: Alejandro Alberto Martín Rozas
+ *  Biblioteca de funciones especificas del TP 1 de Laboratorio.
+ *  Versión 1.0 del 13 de abril de 2022.
+ */
+#include "utn_tp1.h"
+
+int calculateResults(float kilometros, float precioEmpresa, int descuentoDebito, int aumentoCredito, float valorBTC, float* precioConDebito, float* precioCredito, float* precioBTC, float* precioXkm)
+{
+	int rtn =0;
+	if(kilometros!=0 && precioEmpresa!=0)
+	{
+		utn_CalcPriceVarations(precioEmpresa, descuentoDebito, "No se puede hacer la operación", &(*precioConDebito));
+		utn_CalcPriceVarations(precioEmpresa, aumentoCredito, "No se puede hacer la operación", &(*precioCredito));
+		utn_exchangeRate(precioEmpresa, valorBTC, &(*precioBTC));
+		utn_Split(precioEmpresa, kilometros, &(*precioXkm));
+		rtn=1;
+	}
+	return rtn;
+}
+int printResult(float kilometros, float precioEmpresa,float precioEmpresaDos, float precioDebito,float precioDebitoDos, float precioCredito,float precioCreditoDos, float precioBTC, float precioBTCDos, float precioKm, float precioKmDos, float diferenciaPrecio)
+{
+	int rtn;
+
+	if(kilometros!=0 && precioEmpresa!=0 && precioEmpresaDos !=0)
+	{
+	printf("\nKMs Ingresados: %.0f km.",kilometros);
+
+	printf("\n\nPrecio Aerolineas: $ %.2f",precioEmpresa);
+	printf("\na) Precio con tarjeta de débito: $ %.2f", precioDebito);
+	printf("\nb) Precio con tarjeta de crédito: $ %.2f", precioCredito);
+	printf("\nc) Precio con bitcoin: %.6f BTC", precioBTC);
+	printf("\nd) Precio por km: $ %.2f", precioKm);
+
+	printf("\n\nPrecio LATAM: $ %.2f",precioEmpresaDos);
+	printf("\na) Precio con tarjeta de débito: $ %.2f", precioDebitoDos);
+	printf("\nb) Precio con tarjeta de crédito: $ %.2f", precioCreditoDos);
+	printf("\nc) Precio con bitcoin: %.6f BTC", precioBTCDos);
+	printf("\nd) Precio por km: $ %.2f", precioKmDos);
+	printf("\n\nLa diferencia de precio es: $ %.2f \n", diferenciaPrecio);
+	rtn = 1;
+	}
+	else
+	{
+		printf("\n\t\t\tDEBE INGRESAR DATOS Y CALCULARLOS");
+		printf("\n\t\t\tPARA PODER MOSTRAR LOS RESULTADOS\n");
+		rtn= 0;
+	}
+	return rtn;
+}
+int calculateDiference(float precioUno, float precioDos, float* diferencia)
+{
+	int rtn;
+
+	if(precioUno!=0 && precioDos!=0)
+				{
+					if(precioUno>precioDos)
+					{
+						utn_Subtract(precioUno, precioDos, &(*diferencia));
+					}
+					else
+					{
+						utn_Subtract(precioDos, precioUno, &(*diferencia));
+					}
+					printf("\n\t\t\tCALCULADOS TODOS LOS COSTOS\n");
+					rtn = 1;
+				}
+				else
+				{
+					printf("\n\t\tDEBE INGRESAR TODOS LOS DATOS A CALCULAR PRIMERO\n");
+					rtn = 0;
+				}
+	return rtn;
+}

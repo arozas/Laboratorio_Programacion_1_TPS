@@ -1,0 +1,121 @@
+/*
+ * utntp1.c
+ *
+ *  Created on: 13 abr. 2022
+ *  Author: Alejandro Alberto Martín Rozas
+ *  Biblioteca de funciones especificas del TP 1 de Laboratorio.
+ *  Versión 1.0 del 14 de abril de 2022.
+ */
+#include "utntp1.h"
+
+int utntp1_calculateResults(float kilometros, float precioEmpresa, int descuentoDebito, int aumentoCredito, float valorBTC, float* pPrecioConDebito, float* pPrecioCredito, float* pPrecioBTC, float* pPrecioXkm)
+{
+	float debitoAux;
+	float creditoAux;
+	float btcAux;
+	float precioKmAux;
+	int rtn =0;
+	if(kilometros>0 && precioEmpresa>0 && descuentoDebito >=-100 && aumentoCredito >=0 && valorBTC >= 0)
+	{
+		if(operations_CalcPriceVarations(precioEmpresa, descuentoDebito, "No se puede hacer la operación", &debitoAux)==1);
+		{
+			if(operations_CalcPriceVarations(precioEmpresa, aumentoCredito, "No se puede hacer la operación", &creditoAux)==1)
+			{
+				if(operations_ExchangeRate(precioEmpresa, valorBTC, &btcAux)==1)
+				{
+					if(operations_Split(precioEmpresa, kilometros, &precioKmAux)==1)
+					{
+						*pPrecioConDebito=debitoAux;
+						*pPrecioCredito=creditoAux;
+						*pPrecioBTC=btcAux;
+						*pPrecioXkm=precioKmAux;
+						rtn=1;
+					}
+				}
+			}
+		}
+	}
+	return rtn;
+}
+int utntp1_printResult(float kilometros, float precioEmpresa,float precioEmpresaDos, char nombreEmpresaUno[], char nombreEmpresaDos[], float precioDebito,float precioDebitoDos, float precioCredito,float precioCreditoDos, float precioBTC, float precioBTCDos, float precioKm, float precioKmDos, float diferenciaPrecio)
+{
+
+	int rtn;
+	if(kilometros>0 && precioEmpresa>0 && precioEmpresaDos>0 && precioDebito>0 && precioDebitoDos>0 && precioCredito >0 && precioCreditoDos>0 && precioBTC>0 && precioBTCDos>0 && precioKm>0 && precioKmDos>0)
+	{
+		printf("\nKMs Ingresados: %.0f km.",kilometros);
+
+		printf("\n\nPrecio %s: $ %.2f",nombreEmpresaUno ,precioEmpresa);
+		printf("\na) Precio con tarjeta de débito: $ %.2f", precioDebito);
+		printf("\nb) Precio con tarjeta de crédito: $ %.2f", precioCredito);
+		printf("\nc) Precio con bitcoin: %.6f BTC", precioBTC);
+		printf("\nd) Precio por km: $ %.2f", precioKm);
+
+		printf("\n\nPrecio %s: $ %.2f",nombreEmpresaDos ,precioEmpresaDos);
+		printf("\na) Precio con tarjeta de débito: $ %.2f", precioDebitoDos);
+		printf("\nb) Precio con tarjeta de crédito: $ %.2f", precioCreditoDos);
+		printf("\nc) Precio con bitcoin: %.6f BTC", precioBTCDos);
+		printf("\nd) Precio por km: $ %.2f", precioKmDos);
+		printf("\n\nLa diferencia de precio es: $ %.2f \n", diferenciaPrecio);
+		rtn = 1;
+	}
+	else
+	{
+		printf("\n\t\t\tDEBE INGRESAR DATOS Y CALCULARLOS");
+		printf("\n\t\t\tPARA PODER MOSTRAR LOS RESULTADOS\n");
+		rtn= 0;
+	}
+	return rtn;
+}
+int utntp1_calculateDiference(float precioUno, float precioDos, float* pDiferencia)
+{
+	float difAux;
+	int rtn;
+	if(precioUno>0 && precioDos>0 && pDiferencia!=NULL)
+	{
+		if(precioUno>precioDos)
+		{
+			if(operations_Subtract(precioUno, precioDos, &difAux)==1)
+			{
+				*pDiferencia=difAux;
+			}
+		}
+		else
+		{
+			operations_Subtract(precioDos, precioUno, &difAux);
+		}
+		printf("\n\t\t\tCALCULADOS TODOS LOS COSTOS\n");
+		rtn = 1;
+	}
+	else
+	{
+		printf("\n\t\tDEBE INGRESAR TODOS LOS DATOS A CALCULAR PRIMERO\n");
+		rtn = 0;
+	}
+	return rtn;
+}
+int utntp1_forceCharge(float kilometrosForzados, float precioUnoForzado, float precioDosForzado, int descuento, int interes, float btc)
+{
+	int rtn =0;
+	if(kilometrosForzados>0 && precioUnoForzado>0 && precioDosForzado>0 && descuento > -100 && interes >=0 && btc >=0)
+	{
+		float entKm=kilometrosForzados;
+		float entPriceAerolineas=precioUnoForzado;
+		float entPriceLatam=precioDosForzado;
+		float debitPriceAerolineas;
+		float debitPriceLatam;
+		float creditPriceAerolineas;
+		float creditPriceLatam;
+		float btcPriceAerolineas;
+		float btcPriceLatam;
+		float pricePerKmAerolineas;
+		float pricePerKmLatam;
+		float priceDiference;
+		utntp1_calculateResults(entKm, entPriceAerolineas, descuento, interes, btc, &debitPriceAerolineas, &creditPriceAerolineas, &btcPriceAerolineas, &pricePerKmAerolineas);
+		utntp1_calculateResults(entKm, entPriceLatam, descuento, interes, btc, &debitPriceLatam, &creditPriceLatam, &btcPriceLatam, &pricePerKmLatam);
+		utntp1_calculateDiference(entPriceAerolineas, entPriceLatam, &priceDiference);
+		utntp1_printResult(entKm, entPriceAerolineas, entPriceLatam, "Aerolineas","LATAM", debitPriceAerolineas, debitPriceLatam, creditPriceAerolineas, creditPriceLatam, btcPriceAerolineas, btcPriceLatam, pricePerKmAerolineas, pricePerKmLatam, priceDiference);
+		rtn=1;
+	}
+	return rtn;
+}

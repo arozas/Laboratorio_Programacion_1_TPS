@@ -1,0 +1,142 @@
+/*
+ ============================================================================
+ Name        : trabajo_practico_1.c
+ Author      : Alejandro Alberto Martín Rozas
+ Version     : 0.2 del 11 de abril del 2022
+ Copyright   : Your copyright notice
+ Description : Trabajo Practico 1 - Laboratorio 1
+ ============================================================================
+ */
+
+#include "Entrada.h"
+#include "Operaciones.h"
+#include "utn_tp1.h"
+
+// uso todos estos defines para que el código me quede limpio de números.
+
+#define TRUE 1
+#define KM_MAX 15000
+#define KM_MIN 300
+#define INTENTOS 0
+#define PRECIO_MAX 500000
+#define PRECIO_MIN 5000
+#define DESCUENTO -10
+#define INTERES 25
+#define BITCOIN 4606954.55
+#define	CARGAFORZADA_KM 7090
+#define	CARGAFORZADA_AER 162965
+#define	CARGAFORZADA_LAT 159339
+
+int getPrice (char mensaje[], int intentos, int precioMin, int precioMax, float* precioIngresado);
+
+
+int main(void)
+{
+	float x; //kilometros
+	float y; //Aerolineas
+	float z; //LATAM
+	float debitPriceAerolineas;
+	float debitPriceLatam;
+	float creditPriceAerolineas;
+	float creditPriceLatam;
+	float btcPriceAerolineas;
+	float btcPriceLatam;
+	float pricePerKmAerolineas;
+	float pricePerKmLatam;
+	float priceDiference;
+
+	do
+	{
+		switch(menuSixOp("TRABAJO PRACTICO 1", "Ingresar Kilómetros", "Ingresar Precio de Vuelo", "Calcular todos los costos", "Informar Resultados", "Carga forzada de datos", "salir"))
+		{
+		case 1:
+			do
+			{
+				if(getFloat("Ingrese los KM:", INTENTOS, KM_MIN, KM_MAX, "Error, reingrese los km:", &x)!=TRUE)
+				{
+					printf("\n\t\tERROR, DEBE INGRESAR KM ENTRE %d KM Y %d KM \n",KM_MIN, KM_MAX);
+				}
+			}while(menuTwoOp("¿Desea volver a cargar los km?", "SI", "NO")==TRUE);
+			break;
+		case 2:
+			do
+			{
+				switch(menuTwoOp("PRECIO DE LOS VUELOS", "Precio vuelo Aerolineas", "Precio vuelo LATAM"))
+				{
+				case 1:
+					//getPrice("Ingrese el precio del vuelo de Aerolineas:", INTENTOS, PRECIO_MIN, PRECIO_MAX, &y);
+					if(getFloat("Ingrese el precio del vuelo de Aerolineas:", INTENTOS, PRECIO_MIN, PRECIO_MAX, "Error, reingrese el precio:", &y)!=TRUE)
+					{
+						printf("\n\t\tERROR, DEBE INGRESAR UN PRECIO ENTRE $ %d  Y $ %d \n",PRECIO_MIN, PRECIO_MAX);
+					}
+					break;
+				default:
+					getFloat("Ingrese el precio del vuelo de LATAM:", INTENTOS, PRECIO_MIN, PRECIO_MAX, "Error, reingrese el precio:", &z);
+					break;
+				}
+			}while(menuTwoOp("¿Desea volver a cargar los precios?", "SI", "NO")==TRUE);
+			break;
+		case 3:
+			/*La función calcularResultado:
+			 * Hice la función de forma modular, que pueda en todo caso de necesitarse, agregar otra aerolinea
+			 * por eso en este caso la misma se repite, podria haber resuelto con una sola función, pero la
+			 * idea es que quede lo más "general" y "reutilizable" posible, y esta es la mejor forma que se me ocurrió.
+			 * */
+			calculateResults(x, y, DESCUENTO, INTERES, BITCOIN, &debitPriceAerolineas, &creditPriceAerolineas, &btcPriceAerolineas, &pricePerKmAerolineas);
+			calculateResults(z, y, DESCUENTO, INTERES, BITCOIN, &debitPriceLatam, &creditPriceLatam, &btcPriceLatam, &pricePerKmLatam);
+			/*La función calcularDiferencia:
+			 * Esta función es concecuencia de la lógica pensada con la función anterior, si se "agregaran"
+			 * más aerolineas se podria hardcodear distintas diferencias de costos. La misma tiene una validación
+			 * y mensaje que informa si no se pueden hacer calculos.
+			 * */
+			calculateDiference(y, z, &priceDiference);
+			break;
+		case 4:
+			/*La función printResult:
+			 * Siguiendo la linea general del código, si se agregaran nuevas aerolineas se podria reutilizar
+			 * esta función ya los nombres mostrados son strings que modifican la impresión en la consola.
+			 * */
+			printResult(x, y, z,"Aerolineas","LATAM", debitPriceAerolineas, debitPriceLatam, creditPriceAerolineas, creditPriceLatam, btcPriceAerolineas, btcPriceLatam, pricePerKmAerolineas, pricePerKmLatam, priceDiference);
+			break;
+		case 5:
+			/*La carga forzada:
+			 * La verdad no me pareció hacer practico hacer una función solo para la carga forzada,
+			 * por eso harcodee los valores y agregué las funciones correspondientes.
+			 * */
+			x=CARGAFORZADA_KM;
+			y=CARGAFORZADA_AER;
+			z=CARGAFORZADA_LAT;
+			calculateResults(x, y, DESCUENTO, INTERES, BITCOIN, &debitPriceAerolineas, &creditPriceAerolineas, &btcPriceAerolineas, &pricePerKmAerolineas);
+			calculateResults(z, y, DESCUENTO, INTERES, BITCOIN, &debitPriceLatam, &creditPriceLatam, &btcPriceLatam, &pricePerKmLatam);
+			calculateDiference(y, z, &priceDiference);
+			printResult(x, y, z, "Aerolineas","LATAM", debitPriceAerolineas, debitPriceLatam, creditPriceAerolineas, creditPriceLatam, btcPriceAerolineas, btcPriceLatam, pricePerKmAerolineas, pricePerKmLatam, priceDiference);
+			break;
+		default :
+			/*La función finalizarPrograma:
+			 *busque una función que salga del programa exit(-1), pero queria que me imprima un mensaje
+			 *en este caso "FINALIZÓ EL PROGRAMA", asi que lo agregué y evité usar un printf y repetir
+			 *el return del main. Pense en cambiar el main a void y cerrarlo tambien con esta función,
+			 *pero no quise arriesgar a que este mal, lo probé y funcionó, pero nose si por otro lado estoy
+			 *generando un problema que desconozco.
+			 * */
+			endProgram();
+			break;
+		}
+	}while(menuTwoOp("¿Desea continuar al menu principal?", "SI", "NO")==TRUE);
+
+	return EXIT_SUCCESS;
+}
+int getPrice (char mensaje[], int intentos, int precioMin, int precioMax, float* precioIngresado)
+{
+	int rtn=0;
+	if (intentos!=NULL && precioMin < precioMax)
+	{
+		if(getFloat( mensaje, intentos, precioMin, precioMax, "Error, reingrese el precio:", &*precioIngresado)!=TRUE)
+		{
+			printf("\n\t\tERROR, DEBE INGRESAR UN PRECIO ENTRE $ %d  Y $ %d \n",precioMin, precioMax);
+		}
+		rtn=1;
+	}
+	return rtn;
+}
+

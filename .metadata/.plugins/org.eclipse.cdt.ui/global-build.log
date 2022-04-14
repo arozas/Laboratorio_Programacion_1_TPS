@@ -1,0 +1,35 @@
+18:11:42 **** Clean-only build of configuration Debug for project trabajo_practico_1 ****
+make clean 
+rm -rf ./src/Input.d ./src/Input.o ./src/Operations.d ./src/Operations.o ./src/trabajo_practico_1.d ./src/trabajo_practico_1.o ./src/utntp1.d ./src/utntp1.o
+rm -rf trabajo_practico_1
+ 
+18:11:46 **** Build of configuration Debug for project trabajo_practico_1 ****
+make all 
+Building file: ../src/Input.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Input.d" -MT"src/Input.o" -o "src/Input.o" "../src/Input.c"
+Finished building: ../src/Input.c
+ 
+Building file: ../src/Operations.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Operations.d" -MT"src/Operations.o" -o "src/Operations.o" "../src/Operations.c"
+Finished building: ../src/Operations.c
+ 
+Building file: ../src/trabajo_practico_1.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/trabajo_practico_1.d" -MT"src/trabajo_practico_1.o" -o "src/trabajo_practico_1.o" "../src/trabajo_practico_1.c"
+Finished building: ../src/trabajo_practico_1.c
+ 
+Building file: ../src/utntp1.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/utntp1.d" -MT"src/utntp1.o" -o "src/utntp1.o" "../src/utntp1.c"
+Finished building: ../src/utntp1.c
+ 
+Building target: trabajo_practico_1
+Invoking: GCC C Linker
+gcc  -o "trabajo_practico_1"  ./src/Input.o ./src/Operations.o ./src/trabajo_practico_1.o ./src/utntp1.o   
+Finished building target: trabajo_practico_1
+ 
+18:11:49 **** Incremental Build of configuration Debug for project trabajo_practico_1 ****
+make all 
+make: No se hace nada para 'all'.

@@ -1,0 +1,26 @@
+/*
+ * Entrada.h
+ *
+ *  Created on: 1 abr. 2022
+ *      Author: Alejandro Alberto Martín Rozas
+ *      Biblioteca de funciones de entrada.
+ *      Versión 0.3 del 13 de abril de 2022
+ */
+
+#ifndef ENTRADA_H_
+#define ENTRADA_H_
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdio_ext.h>
+
+int getInt(char mensaje[], int reintentos, int minimo, int maximo, char mensajeError[], int *pNumeroingresado);
+int getFloat(char mensaje[], int reintentos, int minimo, int maximo, char mensajeError[], float *pNumeroingresado);
+int getChar(char mensaje[], int reintentos, char minimo, char maximo, char mensajeError[], char *pCaracteringresado);
+int menuTwoOp(char nombreMenu[], char opcion1[], char opcion2[]);
+int menuThreeOp(char nombreMenu[], char opcion1[], char opcion2[], char opcion3[]);
+int menuFourOp(char nombreMenu[], char opcion1[], char opcion2[], char opcion3[], char opcion4[]);
+int menuFiveOp(char nombreMenu[], char opcion1[], char opcion2[], char opcion3[], char opcion4[], char opcion5[]);
+int menuSixOp(char nombreMenu[], char opcion1[], char opcion2[], char opcion3[], char opcion4[], char opcion5[], char opcion6[]);
+void endProgram(void);
+
+#endif /* ENTRADA_H_ */
