@@ -1,0 +1,350 @@
+/*
+ * eFlight.c
+ *
+ *  Created on: 5 may. 2022
+ *      Author: alejandro
+ */
+#include "eFlight.h"
+/// @fn int eFlight_init(eFlight[], int)
+/// @brief
+///
+/// @pre
+/// @post
+/// @param eFlightList
+/// @param length
+/// @return
+int eFlight_init(eFlight eFlightList[], int length)
+{
+	int rtn = -1;
+	int i;
+
+	if (eFlightList != NULL)
+	{
+		if (length > 0)
+		{
+			rtn=0;
+			for (i = 0; i < length; i++)
+			{
+				eFlightList[i].isEmpty = TRUE;
+			}
+		}
+	}
+	return rtn;
+}
+/// @fn int eFlight_searchEmptyIndex(eFlight[], int)
+/// @brief
+///
+/// @pre
+/// @post
+/// @param toSearchStruc
+/// @param length
+/// @return
+int eFlight_searchEmptyIndex(eFlight toSearchStruc[], int length)
+{
+	int rtn = -1;
+	int flag = 0;
+	int i;
+
+	if (toSearchStruc != NULL) {
+		if (length > 0) {
+			//ESTA OK
+			for (i = 0; i < length; i++) {
+				if (toSearchStruc[i].isEmpty == TRUE)
+				{
+					flag = 1;
+					rtn = i;
+					break;
+				}
+			}
+
+			if (flag == 0)
+			{
+				rtn = -2;
+			}
+		} else {
+			rtn = -3;
+		}
+	} else {
+		rtn = -4;
+	}
+
+	return rtn;
+}
+/// @fn int eFlight_searchUsedIndex(eFlight[], int)
+/// @brief
+///
+/// @pre
+/// @post
+/// @param toSearchStruc
+/// @param length
+/// @return
+int eFlight_searchUsedIndex(eFlight toSearchStruc[], int length)
+{
+	int rtn = -1;
+	int i;
+
+	if (toSearchStruc != NULL && length > 0)
+	{
+		for (i = 0; i < length; i++)
+		{
+			if (toSearchStruc[i].isEmpty == FALSE)
+			{
+				rtn = i;
+				break;
+			}
+		}
+
+	}
+
+	return rtn;
+}
+/// @fn void eFlight_printOne(eFlight)
+/// @brief
+///
+/// @pre
+/// @post
+/// @param toPrintStruc
+void eFlight_printOne(eFlight toPrintStruc)
+{
+	printf("\n|:::::::::::::::::::::::::::::::::|"
+			"\n\t\tVUELO"
+			"\n|:::::::::::::::::::::::::::::::::|"
+			"\nID: %d"
+			"\nCÓDIGO DE VUELO: %s\n",
+			toPrintStruc.id,
+			toPrintStruc.flycode);
+	switch(toPrintStruc.statusFlight)
+	{
+	case SCHEDULED:
+		puts("EN HORARIO");
+		puts("|:::::::::::::::::::::::::::::::::|");
+		break;
+	case DELAYED:
+		puts("ATRASADO");
+		puts("|:::::::::::::::::::::::::::::::::|");
+		break;
+	case DEPARTED:
+		puts("VUELO SALIÓ A DESTINO");
+		puts("|:::::::::::::::::::::::::::::::::|");
+		break;
+	case IN_AIR:
+		puts("EN VUELO");
+		puts("|:::::::::::::::::::::::::::::::::|");
+		break;
+	case EXPECTED:
+		puts("VUELO ESPERADO");
+		puts("|:::::::::::::::::::::::::::::::::|");
+		break;
+	case DIVERTED:
+		puts("VUELO DESVIADO");
+		puts("|:::::::::::::::::::::::::::::::::|");
+		break;
+	case RECOVERY:
+		puts("VUELO EN RECUPERACIÓN");
+		puts("|:::::::::::::::::::::::::::::::::|");
+		break;
+	case LANDED:
+		puts("VUELO ATERRIZADO");
+		puts("|:::::::::::::::::::::::::::::::::|");
+		break;
+	case ARRIVED:
+		puts("VUELO EN DESTINO");
+		puts("|:::::::::::::::::::::::::::::::::|");
+		break;
+	case CANCELLED:
+		puts("CANCELADO");
+		puts("|:::::::::::::::::::::::::::::::::|");
+		break;
+	case PAST_FLIGHT:
+		puts("VUELO PASADO");
+		puts("|:::::::::::::::::::::::::::::::::|");
+		break;
+	}
+}
+/// @fn int eFlight_printAll(eFlight[], int)
+/// @brief
+///
+/// @pre
+/// @post
+/// @param toPrintStruc
+/// @param length
+/// @return
+int eFlight_printAll(eFlight toPrintStruc[], int length)
+{
+	int rtn = -1;
+	int i;
+
+	if (toPrintStruc != NULL)
+	{
+		if (length > 0)
+		{
+			rtn=0;
+			for (i = 0; i < length; i++)
+			{
+				if (toPrintStruc[i].isEmpty == FALSE)
+				{
+					eFlight_printOne(toPrintStruc[i]);
+				}
+			}
+		}
+	}
+	return rtn;
+}
+/// @fn eFlight eFlight_create()
+/// @brief
+///
+/// @pre
+/// @post
+/// @return
+eFlight eFlight_create(eFlight *flightList)
+{
+	int rtn = 1;
+
+	eFlight eFlightBuffer;
+	int flightStatusMenu;
+
+	if(input_getStringletters("INGRESE CÓDIGO DE VUELO:", RETRIES, "ERROR", eFlightBuffer.flycode, FLYCODE_LENGTH)==0)
+	{
+		flightStatusMenu=menu_menu("ELIJA EL ESTADO DEL VUELO",
+				"\n1 - EN HORARIO."
+				"\n2 - ATRASADO."
+				"\n3 - VUELO SALIÓ A DESTINO."
+				"\n4 - EN VUELO."
+				"\n5 - VUELO ESPERADO."
+				"\n6 - VUELO DESVIADO."
+				"\n7 - VUELO EN RECUPERACIÓN."
+				"\n8 - VUELO ATERRIZADO."
+				"\n9 - VUELO EN DESTINO."
+				"\n10 - CANCELADO."
+				"\n11 - VUELO PASADO."
+				,"ERROR INTENTE DE NUEVO"
+				, RETRIES
+				, 11);
+		switch (flightStatusMenu)
+		{
+		case SCHEDULED:
+			eFlightBuffer.statusFlight=SCHEDULED;
+			break;
+		case DELAYED:
+			eFlightBuffer.statusFlight=DELAYED;
+			break;
+		case DEPARTED:
+			eFlightBuffer.statusFlight=DEPARTED;
+			break;
+		case IN_AIR:
+			eFlightBuffer.statusFlight=IN_AIR;
+			break;
+		case EXPECTED:
+			eFlightBuffer.statusFlight=EXPECTED;
+			break;
+		case DIVERTED:
+			eFlightBuffer.statusFlight=DIVERTED;
+			break;
+		case RECOVERY:
+			eFlightBuffer.statusFlight=RECOVERY;
+			break;
+		case LANDED:
+			eFlightBuffer.statusFlight=LANDED;
+			break;
+		case ARRIVED:
+			eFlightBuffer.statusFlight=ARRIVED;
+			break;
+		case CANCELLED:
+			eFlightBuffer.statusFlight=CANCELLED;
+			break;
+		case PAST_FLIGHT:
+			eFlightBuffer.statusFlight=PAST_FLIGHT;
+			break;
+		}
+		strncpy(flightList->flycode,eFlightBuffer.flycode,FLYCODE_LENGTH);
+		flightList->statusFlight=eFlightBuffer.statusFlight;
+	}
+	return eFlightBuffer;
+}
+/// @fn int eFlight_searchIndexId(eFlight[], int)
+/// @brief
+///
+/// @pre
+/// @post
+/// @param toSearchStruc
+/// @param length
+/// @return
+int eFlight_searchIndexId(eFlight toSearchStruc[], int length)
+{
+	int rtn = -1;
+	int flag = 0;
+	int i;
+	int searchId;
+
+	if (toSearchStruc != NULL) {
+		if (length > 0) {
+			//ESTA OK
+
+			//MUESTRO TODOS - Le muestro al usuario todos los dados de alta para que elija cual ID dar de baja
+			eFlight_printAll(toSearchStruc, length);
+
+			//PEDIR UN ID
+			input_getInt("INGRESE ID: ", 1 , 0,1000, "ERROR, VUELVA A INGRESAR ID:", &searchId);
+
+			for (i = 0; i < length; i++) {
+				if (toSearchStruc[i].isEmpty == FALSE) {
+					if (toSearchStruc[i].id == searchId) {
+						flag = 1;
+						rtn = i; //retorno index del ID que estoy buscando
+						break;
+					}
+				}
+			}
+
+			if (flag == 0) {
+				rtn = -2;
+			}
+		} else {
+			rtn = -3;
+		}
+	} else {
+		rtn = -4;
+	}
+
+	return rtn;
+}
+int eFlight_searchIndexFlycodeonAir(eFlight toSearchStruc[], int length, char flycode[])
+{
+	int rtn = -1;
+	int flag = 0;
+	int i;
+
+	if (toSearchStruc != NULL)
+	{
+		if (length > 0)
+		{
+			for (i = 0; i < length; i++)
+			{
+				if (toSearchStruc[i].isEmpty == FALSE)
+				{
+					if(toSearchStruc[i].statusFlight==4)
+					{
+						if (strcmp(toSearchStruc[i].flycode,flycode)==0)
+						{
+							flag = 1;
+							rtn = i;
+							break;
+						}
+					}
+				}
+			}
+
+			if (flag == 0)
+			{
+				rtn = -2;
+			}
+		} else {
+			rtn = -3;
+		}
+	} else {
+		rtn = -4;
+	}
+
+	return rtn;
+}
+

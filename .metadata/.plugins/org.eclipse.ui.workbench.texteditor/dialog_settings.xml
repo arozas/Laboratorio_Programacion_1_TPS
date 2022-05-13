@@ -1,51 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="pResultadoOperacion"/>
+		<item key="selection" value="lastname"/>
 		<item key="wrap" value="true"/>
-		<item key="casesensitive" value="false"/>
+		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="resultadoOperacion"/>
-			<item value="precioConDescuento"/>
-			<item value="entrada_menuTwoOp"/>
-			<item value="x"/>
-			<item value="25"/>
-			<item value="-10"/>
-			<item value="diferenciaPrecio"/>
-			<item value="precioPorKmLatam"/>
-			<item value="precioPorKmAerolineas"/>
-			<item value="precioBTCLatam"/>
-			<item value="precioBTCAerolineas"/>
-			<item value="btcPriceAerolineas"/>
-			<item value="precioConCreditoLatam"/>
-			<item value="precioConCreditoAerolineas"/>
-			<item value="precioConDebitoLatam"/>
+			<item value="id"/>
+			<item value="array"/>
+			<item value="criterio"/>
+			<item value="eGen"/>
+			<item value="LOADED"/>
+			<item value="bufferList"/>
+			<item value="eFlight"/>
+			<item value="ePassenger"/>
+			<item value="emptyIndex"/>
+			<item value="emptyPassIndex"/>
+			<item value="uReportsBuffer"/>
+			<item value="PassengerBuffer"/>
+			<item value="passengerTypeMenu"/>
+			<item value="FLIGHTsTATUSMenu"/>
+			<item value="DOWN"/>
 		</list>
 		<list key="replacehistory">
+			<item value="lastname"/>
+			<item value="lastName"/>
+			<item value="passengerList"/>
+			<item value="order"/>
+			<item value="ePassenger"/>
+			<item value="FALSE"/>
+			<item value="passengerBuffer"/>
+			<item value="eFlight"/>
+			<item value="emptyPassengerIndex"/>
+			<item value="PassengerBuffer"/>
+			<item value="flightStatusMenu"/>
+			<item value="uReports"/>
+			<item value="UNREGISTERED"/>
+			<item value="TRUE"/>
 			<item value="pResultadoOperacion"/>
-			<item value="pPrecioConDescuento"/>
-			<item value="input_menuTwoOp"/>
-			<item value="INTERES"/>
-			<item value="DESCUENTO"/>
-			<item value="priceDiference"/>
-			<item value="pricePerKmLatam"/>
-			<item value="pricePerKmAerolineas"/>
-			<item value="btcPriceLatam"/>
-			<item value="btcPriceAerolineas"/>
-			<item value="creditPriceLatam"/>
-			<item value="creditPriceAerolineas"/>
-			<item value="debitPriceLatam"/>
-			<item value="debitPriceAerolineas"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="477"/>
-		<item key="DIALOG_Y_ORIGIN" value="75"/>
+		<item key="DIALOG_X_ORIGIN" value="20"/>
+		<item key="DIALOG_Y_ORIGIN" value="20"/>
 		<item key="DIALOG_WIDTH" value="363"/>
 		<item key="DIALOG_HEIGHT" value="443"/>
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="20"/>
+		<item key="DIALOG_Y_ORIGIN" value="20"/>
 	</section>
 </section>
