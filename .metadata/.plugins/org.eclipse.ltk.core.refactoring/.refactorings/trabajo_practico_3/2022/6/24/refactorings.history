@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;trabajo_practico_3/eFlight.c&apos; to &apos;Flight.c&apos;" description="Rename resource &apos;eFlight.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="eFlight.c" name="Flight.c" stamp="1654573077307" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;trabajo_practico_3/eFlight.h&apos; to &apos;Flight.h&apos;" description="Rename resource &apos;eFlight.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="eFlight.h" name="Flight.h" stamp="1654573082722" updateReferences="true"/>
+</session>

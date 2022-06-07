@@ -1,0 +1,79 @@
+/*
+ * Passenger.h
+ *
+ *  Created on: 19 may. 2022
+ *
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "input.h"
+#include "menu.h"
+
+#ifndef PASSENGER_H_
+#define PASSENGER_H_
+
+// *************************************** STRING LENGTH **************************************
+#define NAME_LENGTH 51
+#define FLYCODE_LENGTH 10
+// ************************************** ISEMPTY STATUS **************************************
+#define TRUE 1
+#define FALSE 0
+#define UNREGISTERED -1
+// *************************************** FLIGHT STATUS **************************************
+#define SCHEDULED 1
+#define DELAYED 2
+#define DEPARTED 3
+#define IN_AIR 4
+#define EXPECTED 5
+#define	DIVERTED 6
+#define RECOVERY 7
+#define LANDED 8
+#define ARRIVED 9
+#define CANCELLED 10
+#define PAST_FLIGHT 11
+// ************************************** PASSENGER TYPES **************************************
+#define ADULT 1
+#define CHILDREN 2
+#define INFANT 3
+// *************************************** OTHER DEFINES  **************************************
+#define RETRIES 3
+#define MAX_PRICE 1000000
+#define MIN_PRICE 2000
+
+typedef struct
+{
+	int id;
+	char nombre[50];
+	char apellido[50];
+	float precio;
+	int tipoPasajero;
+	char codigoVuelo[4];
+	int isEmpty;
+
+}Passenger;
+
+Passenger* Passenger_new();
+Passenger* Passenger_newParametros(char* idStr,char* nombreStr,char*apellidoStr,char* precioStr, char* tipoPasajeroStr,char* codigoVueloStr);
+void Passenger_delete(Passenger* this);
+
+int Passenger_setId(Passenger* this,int id);
+int Passenger_getId(Passenger* this,int* id);
+
+int Passenger_setNombre(Passenger* this,char* nombre);
+int Passenger_getNombre(Passenger* this,char* nombre);
+
+int Passenger_setApellido(Passenger* this,char* apellido);
+int Passenger_getApellido(Passenger* this,char* apellido);
+
+int Passenger_setPrecio(Passenger* this,float precio);
+int Passenger_getPrecio(Passenger* this,float* precio);
+
+int Passenger_setTipoPasajero(Passenger* this,int tipoPasajero);
+int Passenger_getTipoPasajero(Passenger* this,int* tipoPasajero);
+
+int Passenger_setCodigoVuelo(Passenger* this,char* codigoVuelo);
+int Passenger_getCodigoVuelo(Passenger* this,char* codigoVuelo);
+
+
+#endif /* PASSENGER_H_ */

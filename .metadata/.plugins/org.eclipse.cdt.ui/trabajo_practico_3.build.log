@@ -1,0 +1,23 @@
+00:44:29 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+../Controller.c: In function ‘controller_addPassenger’:
+../Controller.c:141:49: warning: implicit declaration of function ‘controller_PrinPassenger’; did you mean ‘controller_editPassenger’? [-Wimplicit-function-declaration]
+  141 |                                                 controller_PrinPassenger(auxPassenger);
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                 controller_editPassenger
+Finished building: ../Controller.c
+ 
+Building target: trabajo_practico_3
+Invoking: GCC C Linker
+gcc  -o "trabajo_practico_3" ./Controller.o ./Flight.o ./Passenger.o ./input.o ./main.o ./menu.o ./operations.o ./parser.o    /home/alejandro/Documentos/Estudio/tp_laboratorio_1/trabajo_practico_3/LinkedList.a
+/usr/bin/ld: ./Controller.o: en la función `controller_addPassenger':
+/home/alejandro/Documentos/Estudio/tp_laboratorio_1/trabajo_practico_3/Debug/../Controller.c:141: referencia a `controller_PrinPassenger' sin definir
+collect2: error: ld returned 1 exit status
+make: *** [makefile:45: trabajo_practico_3] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+
+00:44:30 Build Failed. 3 errors, 1 warnings. (took 514ms)
+

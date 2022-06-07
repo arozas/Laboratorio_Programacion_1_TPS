@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="lastname"/>
+		<item key="selection" value="rtn"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="ret"/>
+			<item value="rtn"/>
+			<item value="confirmarComando"/>
+			<item value="con"/>
+			<item value="parser_EmployeeFromText"/>
+			<item value="pArrayListEmployee"/>
+			<item value="passengers"/>
+			<item value="aPossibleAlpha"/>
 			<item value="id"/>
 			<item value="array"/>
 			<item value="criterio"/>
@@ -15,16 +23,14 @@
 			<item value="LOADED"/>
 			<item value="bufferList"/>
 			<item value="eFlight"/>
-			<item value="ePassenger"/>
-			<item value="emptyIndex"/>
-			<item value="emptyPassIndex"/>
-			<item value="uReportsBuffer"/>
-			<item value="PassengerBuffer"/>
-			<item value="passengerTypeMenu"/>
-			<item value="FLIGHTsTATUSMenu"/>
-			<item value="DOWN"/>
 		</list>
 		<list key="replacehistory">
+			<item value="rtn"/>
+			<item value="confirm"/>
+			<item value="parser_PassengerFromText"/>
+			<item value="pArrayListPassenger"/>
+			<item value="users"/>
+			<item value="aPossibleEmail"/>
 			<item value="lastname"/>
 			<item value="lastName"/>
 			<item value="passengerList"/>
@@ -34,12 +40,6 @@
 			<item value="passengerBuffer"/>
 			<item value="eFlight"/>
 			<item value="emptyPassengerIndex"/>
-			<item value="PassengerBuffer"/>
-			<item value="flightStatusMenu"/>
-			<item value="uReports"/>
-			<item value="UNREGISTERED"/>
-			<item value="TRUE"/>
-			<item value="pResultadoOperacion"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

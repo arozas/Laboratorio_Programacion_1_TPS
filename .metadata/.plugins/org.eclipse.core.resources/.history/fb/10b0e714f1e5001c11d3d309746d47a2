@@ -1,0 +1,14 @@
+/*
+ * Passenger.c
+ *
+ *  Created on: 19 may. 2022
+ *      Author:
+ */
+
+
+Passenger* Passenger_new()
+{
+	Passenger* memoryPointer = NULL;
+	memoryPointer = (Passenger*) malloc(sizeof(Passenger));
+	return memoryPointer;
+}
