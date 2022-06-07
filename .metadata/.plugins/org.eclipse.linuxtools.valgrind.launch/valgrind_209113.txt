@@ -1,0 +1,5 @@
+==209113== 248,016 (16 direct, 248,000 indirect) bytes in 1 blocks are definitely lost in loss record 3 of 3
+==209113==    at 0x4E05045: malloc (/build/valgrind/parts/valgrind/build/coregrind/m_replacemalloc/vg_replace_malloc.c:381)
+==209113==    by 0x10B7A4: ll_newLinkedList (/home/mauro/Descargas/linkedlist_v3_resuelto-20180723T131017Z-001/linkedlist_v3_resuelto/src/LinkedList.c:19)
+==209113==    by 0x10AF28: main (/home/alejandro/Documentos/Estudio/tp_laboratorio_1/trabajo_practico_3/Debug/../main.c:28)
+==209113== 

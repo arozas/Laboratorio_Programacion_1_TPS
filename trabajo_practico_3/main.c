@@ -22,9 +22,6 @@
     10. Salir
  *****************************************************/
 
-
-
-
 int main()
 {
 	int option = 0;
@@ -72,6 +69,19 @@ int main()
 			break;
 		case 3:
 			controller_addPassenger(listaPasajeros);
+			break;
+		case 4:
+			break;
+		case 5:
+			break;
+		case 6:
+			controller_ListPassenger(listaPasajeros);
+			break;
+		case 7:
+			break;
+		case 8:
+			break;
+		case 9:
 			break;
 		}
 	}while(option != 10);

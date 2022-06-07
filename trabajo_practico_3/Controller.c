@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include "Controller.h"
 #include "LinkedList.h"
-#include "Passenger.h"
 #include "parser.h"
 #include "menu.h"
 #include "input.h"
@@ -138,7 +137,7 @@ int controller_addPassenger(LinkedList* pArrayListPassenger)
 						Passenger_setId(PassengerBuffer,lastID);
 						ll_add(pArrayListPassenger,PassengerBuffer);
 						printf("\nSe ha cargado con exito el nuevo pasajero");
-						controller_PrintPassenger(PassengerBuffer);
+						controller_printPassenger(PassengerBuffer);
 						ret = 0;
 					}
 				}
@@ -187,7 +186,27 @@ int controller_removePassenger(LinkedList* pArrayListPassenger)
  */
 int controller_ListPassenger(LinkedList* pArrayListPassenger)
 {
-	return 1;
+	int rtn = -1;
+	int i;
+	int listSize;
+	Passenger* passengerToPrint;
+	if(pArrayListPassenger != NULL)
+	{
+		listSize = ll_len(pArrayListPassenger);
+		if(listSize != -1)
+		{
+			for (i = 0; i < listSize; i++)
+			{
+				passengerToPrint = (Passenger*)ll_get(pArrayListPassenger, i);
+				if(passengerToPrint != NULL)
+				{
+					controller_printPassenger(passengerToPrint);
+					rtn = 0;
+				}
+			}//FIN FOR
+		}
+	}
+    return rtn;
 }
 
 /** \brief Ordenar pasajeros
@@ -269,3 +288,19 @@ int controller_searchLastId(LinkedList* pArrayListPassenger)
 	}
 	return rtn;
 }
+void controller_printPassenger(Passenger* this)
+{
+	if(this != NULL)
+	{
+		int bufferId;
+		char bufferName[NAME_LENGTH];
+		char bufferSurname[NAME_LENGTH];
+		float bufferPrice;
+		Passenger_getId(this,&bufferId);
+		Passenger_getNombre(this,bufferName);
+		Passenger_getApellido(this,bufferSurname);
+		Passenger_getPrecio(this,&bufferPrice);
+		printf("\nID \t NOMBRE \t APELLIDO \t PRECIO");
+		printf("\n %d \t %s \t %s \t %f",bufferId,bufferName,bufferSurname,bufferPrice);
+	}
+}//FIN employee_PrintEmployee()

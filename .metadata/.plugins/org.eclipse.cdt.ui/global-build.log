@@ -1845,3 +1845,1705 @@ gcc  -o "trabajo_practico_3" ./Controller.o ./Flight.o ./Passenger.o ./input.o .
 collect2: error: ld returned 1 exit status
 make: *** [makefile:45: trabajo_practico_3] Error 1
 "make all" terminated with exit code 2. Build might be incomplete.
+01:10:03 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+In file included from ../Controller.c:3:
+../Controller.h:13:32: error: unknown type name ‘Passenger’
+   13 | void controller_printPassenger(Passenger* this);
+      |                                ^~~~~~~~~
+../Controller.c: In function ‘controller_addPassenger’:
+../Controller.c:141:49: warning: implicit declaration of function ‘controller_PrintPassenger’; did you mean ‘controller_ListPassenger’? [-Wimplicit-function-declaration]
+  141 |                                                 controller_PrintPassenger(PassengerBuffer);
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                 controller_ListPassenger
+../Controller.c: In function ‘controller_printPassenger’:
+../Controller.c:282:44: warning: passing argument 2 of ‘Passenger_getApellido’ from incompatible pointer type [-Wincompatible-pointer-types]
+  282 |                 Passenger_getApellido(this,&bufferSurname);
+      |                                            ^~~~~~~~~~~~~~
+      |                                            |
+      |                                            char (*)[51]
+In file included from ../Controller.c:5:
+../Passenger.h:66:49: note: expected ‘char *’ but argument is of type ‘char (*)[51]’
+   66 | int Passenger_getApellido(Passenger* this,char* apellido);
+      |                                           ~~~~~~^~~~~~~~
+../Controller.c:285:41: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘char *’ [-Wformat=]
+  285 |                 printf("\n %d \t %s \t %d \t %d",bufferId,bufferName,bufferSurname,bufferPrice);
+      |                                        ~^                            ~~~~~~~~~~~~~
+      |                                         |                            |
+      |                                         int                          char *
+      |                                        %s
+../Controller.c:285:47: warning: format ‘%d’ expects argument of type ‘int’, but argument 5 has type ‘double’ [-Wformat=]
+  285 |                 printf("\n %d \t %s \t %d \t %d",bufferId,bufferName,bufferSurname,bufferPrice);
+      |                                              ~^                                    ~~~~~~~~~~~
+      |                                               |                                    |
+      |                                               int                                  double
+      |                                              %f
+make: *** [subdir.mk:41: Controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+01:10:44 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+In file included from ../Controller.c:3:
+../Controller.h:13:32: error: unknown type name ‘Passenger’
+   13 | void controller_printPassenger(Passenger* this);
+      |                                ^~~~~~~~~
+../Controller.c: In function ‘controller_addPassenger’:
+../Controller.c:141:49: warning: implicit declaration of function ‘controller_PrintPassenger’; did you mean ‘controller_ListPassenger’? [-Wimplicit-function-declaration]
+  141 |                                                 controller_PrintPassenger(PassengerBuffer);
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                 controller_ListPassenger
+../Controller.c: In function ‘controller_printPassenger’:
+../Controller.c:282:44: warning: passing argument 2 of ‘Passenger_getApellido’ from incompatible pointer type [-Wincompatible-pointer-types]
+  282 |                 Passenger_getApellido(this,&bufferSurname);
+      |                                            ^~~~~~~~~~~~~~
+      |                                            |
+      |                                            char (*)[51]
+In file included from ../Controller.c:5:
+../Passenger.h:66:49: note: expected ‘char *’ but argument is of type ‘char (*)[51]’
+   66 | int Passenger_getApellido(Passenger* this,char* apellido);
+      |                                           ~~~~~~^~~~~~~~
+make: *** [subdir.mk:41: Controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+01:10:46 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+In file included from ../Controller.c:3:
+../Controller.h:13:32: error: unknown type name ‘Passenger’
+   13 | void controller_printPassenger(Passenger* this);
+      |                                ^~~~~~~~~
+../Controller.c: In function ‘controller_addPassenger’:
+../Controller.c:141:49: warning: implicit declaration of function ‘controller_PrintPassenger’; did you mean ‘controller_ListPassenger’? [-Wimplicit-function-declaration]
+  141 |                                                 controller_PrintPassenger(PassengerBuffer);
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                 controller_ListPassenger
+../Controller.c: In function ‘controller_printPassenger’:
+../Controller.c:282:44: warning: passing argument 2 of ‘Passenger_getApellido’ from incompatible pointer type [-Wincompatible-pointer-types]
+  282 |                 Passenger_getApellido(this,&bufferSurname);
+      |                                            ^~~~~~~~~~~~~~
+      |                                            |
+      |                                            char (*)[51]
+In file included from ../Controller.c:5:
+../Passenger.h:66:49: note: expected ‘char *’ but argument is of type ‘char (*)[51]’
+   66 | int Passenger_getApellido(Passenger* this,char* apellido);
+      |                                           ~~~~~~^~~~~~~~
+make: *** [subdir.mk:41: Controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+01:11:54 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+In file included from ../Controller.c:3:
+../Controller.h:13:32: error: unknown type name ‘Passenger’
+   13 | void controller_printPassenger(Passenger* this);
+      |                                ^~~~~~~~~
+../Controller.c: In function ‘controller_addPassenger’:
+../Controller.c:141:49: warning: implicit declaration of function ‘controller_PrintPassenger’; did you mean ‘controller_ListPassenger’? [-Wimplicit-function-declaration]
+  141 |                                                 controller_PrintPassenger(PassengerBuffer);
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                 controller_ListPassenger
+../Controller.c: In function ‘controller_printPassenger’:
+../Controller.c:281:42: warning: passing argument 2 of ‘Passenger_getNombre’ from incompatible pointer type [-Wincompatible-pointer-types]
+  281 |                 Passenger_getNombre(this,bufferName);
+      |                                          ^~~~~~~~~~
+      |                                          |
+      |                                          char **
+In file included from ../Controller.c:5:
+../Passenger.h:63:47: note: expected ‘char *’ but argument is of type ‘char **’
+   63 | int Passenger_getNombre(Passenger* this,char* nombre);
+      |                                         ~~~~~~^~~~~~
+../Controller.c:282:44: warning: passing argument 2 of ‘Passenger_getApellido’ from incompatible pointer type [-Wincompatible-pointer-types]
+  282 |                 Passenger_getApellido(this,bufferSurname);
+      |                                            ^~~~~~~~~~~~~
+      |                                            |
+      |                                            char **
+In file included from ../Controller.c:5:
+../Passenger.h:66:49: note: expected ‘char *’ but argument is of type ‘char **’
+   66 | int Passenger_getApellido(Passenger* this,char* apellido);
+      |                                           ~~~~~~^~~~~~~~
+../Controller.c:285:29: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘int *’ [-Wformat=]
+  285 |                 printf("\n %d \t %s \t %s \t %f",bufferId,bufferName,bufferSurname,bufferPrice);
+      |                            ~^                    ~~~~~~~~
+      |                             |                    |
+      |                             int                  int *
+      |                            %ls
+../Controller.c:285:35: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘char **’ [-Wformat=]
+  285 |                 printf("\n %d \t %s \t %s \t %f",bufferId,bufferName,bufferSurname,bufferPrice);
+      |                                  ~^                       ~~~~~~~~~~
+      |                                   |                       |
+      |                                   char *                  char **
+../Controller.c:285:41: warning: format ‘%s’ expects argument of type ‘char *’, but argument 4 has type ‘char **’ [-Wformat=]
+  285 |                 printf("\n %d \t %s \t %s \t %f",bufferId,bufferName,bufferSurname,bufferPrice);
+      |                                        ~^                            ~~~~~~~~~~~~~
+      |                                         |                            |
+      |                                         char *                       char **
+../Controller.c:285:47: warning: format ‘%f’ expects argument of type ‘double’, but argument 5 has type ‘float *’ [-Wformat=]
+  285 |                 printf("\n %d \t %s \t %s \t %f",bufferId,bufferName,bufferSurname,bufferPrice);
+      |                                              ~^                                    ~~~~~~~~~~~
+      |                                               |                                    |
+      |                                               double                               float *
+make: *** [subdir.mk:41: Controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+01:12:19 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+In file included from ../Controller.c:3:
+../Controller.h:13:32: error: unknown type name ‘Passenger’
+   13 | void controller_printPassenger(Passenger* this);
+      |                                ^~~~~~~~~
+../Controller.c: In function ‘controller_addPassenger’:
+../Controller.c:141:49: warning: implicit declaration of function ‘controller_PrintPassenger’; did you mean ‘controller_ListPassenger’? [-Wimplicit-function-declaration]
+  141 |                                                 controller_PrintPassenger(PassengerBuffer);
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                 controller_ListPassenger
+../Controller.c: In function ‘controller_printPassenger’:
+../Controller.c:281:42: warning: passing argument 2 of ‘Passenger_getNombre’ from incompatible pointer type [-Wincompatible-pointer-types]
+  281 |                 Passenger_getNombre(this,bufferName);
+      |                                          ^~~~~~~~~~
+      |                                          |
+      |                                          char **
+In file included from ../Controller.c:5:
+../Passenger.h:63:47: note: expected ‘char *’ but argument is of type ‘char **’
+   63 | int Passenger_getNombre(Passenger* this,char* nombre);
+      |                                         ~~~~~~^~~~~~
+../Controller.c:282:44: warning: passing argument 2 of ‘Passenger_getApellido’ from incompatible pointer type [-Wincompatible-pointer-types]
+  282 |                 Passenger_getApellido(this,bufferSurname);
+      |                                            ^~~~~~~~~~~~~
+      |                                            |
+      |                                            char **
+In file included from ../Controller.c:5:
+../Passenger.h:66:49: note: expected ‘char *’ but argument is of type ‘char **’
+   66 | int Passenger_getApellido(Passenger* this,char* apellido);
+      |                                           ~~~~~~^~~~~~~~
+../Controller.c:285:29: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘int *’ [-Wformat=]
+  285 |                 printf("\n %d \t %s \t %s \t %D",bufferId,bufferName,bufferSurname,bufferPrice);
+      |                            ~^                    ~~~~~~~~
+      |                             |                    |
+      |                             int                  int *
+      |                            %ls
+../Controller.c:285:35: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘char **’ [-Wformat=]
+  285 |                 printf("\n %d \t %s \t %s \t %D",bufferId,bufferName,bufferSurname,bufferPrice);
+      |                                  ~^                       ~~~~~~~~~~
+      |                                   |                       |
+      |                                   char *                  char **
+../Controller.c:285:41: warning: format ‘%s’ expects argument of type ‘char *’, but argument 4 has type ‘char **’ [-Wformat=]
+  285 |                 printf("\n %d \t %s \t %s \t %D",bufferId,bufferName,bufferSurname,bufferPrice);
+      |                                        ~^                            ~~~~~~~~~~~~~
+      |                                         |                            |
+      |                                         char *                       char **
+../Controller.c:285:47: warning: conversion lacks type at end of format [-Wformat=]
+  285 |                 printf("\n %d \t %s \t %s \t %D",bufferId,bufferName,bufferSurname,bufferPrice);
+      |                                               ^
+../Controller.c:285:24: warning: too many arguments for format [-Wformat-extra-args]
+  285 |                 printf("\n %d \t %s \t %s \t %D",bufferId,bufferName,bufferSurname,bufferPrice);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [subdir.mk:41: Controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+01:12:48 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+In file included from ../Controller.c:3:
+../Controller.h:13:32: error: unknown type name ‘Passenger’
+   13 | void controller_printPassenger(Passenger* this);
+      |                                ^~~~~~~~~
+../Controller.c: In function ‘controller_addPassenger’:
+../Controller.c:141:49: warning: implicit declaration of function ‘controller_PrintPassenger’; did you mean ‘controller_ListPassenger’? [-Wimplicit-function-declaration]
+  141 |                                                 controller_PrintPassenger(PassengerBuffer);
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                 controller_ListPassenger
+../Controller.c: In function ‘controller_printPassenger’:
+../Controller.c:281:42: warning: passing argument 2 of ‘Passenger_getNombre’ from incompatible pointer type [-Wincompatible-pointer-types]
+  281 |                 Passenger_getNombre(this,bufferName);
+      |                                          ^~~~~~~~~~
+      |                                          |
+      |                                          char **
+In file included from ../Controller.c:5:
+../Passenger.h:63:47: note: expected ‘char *’ but argument is of type ‘char **’
+   63 | int Passenger_getNombre(Passenger* this,char* nombre);
+      |                                         ~~~~~~^~~~~~
+../Controller.c:282:44: warning: passing argument 2 of ‘Passenger_getApellido’ from incompatible pointer type [-Wincompatible-pointer-types]
+  282 |                 Passenger_getApellido(this,bufferSurname);
+      |                                            ^~~~~~~~~~~~~
+      |                                            |
+      |                                            char **
+In file included from ../Controller.c:5:
+../Passenger.h:66:49: note: expected ‘char *’ but argument is of type ‘char **’
+   66 | int Passenger_getApellido(Passenger* this,char* apellido);
+      |                                           ~~~~~~^~~~~~~~
+../Controller.c:285:29: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘int *’ [-Wformat=]
+  285 |                 printf("\n %d \t %s \t %S \t %D",bufferId,bufferName,bufferSurname,bufferPrice);
+      |                            ~^                    ~~~~~~~~
+      |                             |                    |
+      |                             int                  int *
+      |                            %ls
+../Controller.c:285:35: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘char **’ [-Wformat=]
+  285 |                 printf("\n %d \t %s \t %S \t %D",bufferId,bufferName,bufferSurname,bufferPrice);
+      |                                  ~^                       ~~~~~~~~~~
+      |                                   |                       |
+      |                                   char *                  char **
+../Controller.c:285:41: warning: format ‘%S’ expects argument of type ‘wchar_t *’, but argument 4 has type ‘char **’ [-Wformat=]
+  285 |                 printf("\n %d \t %s \t %S \t %D",bufferId,bufferName,bufferSurname,bufferPrice);
+      |                                        ~^                            ~~~~~~~~~~~~~
+      |                                         |                            |
+      |                                         int *                        char **
+../Controller.c:285:47: warning: conversion lacks type at end of format [-Wformat=]
+  285 |                 printf("\n %d \t %s \t %S \t %D",bufferId,bufferName,bufferSurname,bufferPrice);
+      |                                               ^
+../Controller.c:285:24: warning: too many arguments for format [-Wformat-extra-args]
+  285 |                 printf("\n %d \t %s \t %S \t %D",bufferId,bufferName,bufferSurname,bufferPrice);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [subdir.mk:41: Controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+01:13:12 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+In file included from ../Controller.c:3:
+../Controller.h:13:32: error: unknown type name ‘Passenger’
+   13 | void controller_printPassenger(Passenger* this);
+      |                                ^~~~~~~~~
+../Controller.c: In function ‘controller_addPassenger’:
+../Controller.c:141:49: warning: implicit declaration of function ‘controller_PrintPassenger’; did you mean ‘controller_ListPassenger’? [-Wimplicit-function-declaration]
+  141 |                                                 controller_PrintPassenger(PassengerBuffer);
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                 controller_ListPassenger
+../Controller.c: In function ‘controller_printPassenger’:
+../Controller.c:280:38: warning: passing argument 2 of ‘Passenger_getId’ makes pointer from integer without a cast [-Wint-conversion]
+  280 |                 Passenger_getId(this,bufferId);
+      |                                      ^~~~~~~~
+      |                                      |
+      |                                      int
+In file included from ../Controller.c:5:
+../Passenger.h:60:42: note: expected ‘int *’ but argument is of type ‘int’
+   60 | int Passenger_getId(Passenger* this,int* id);
+      |                                     ~~~~~^~
+../Controller.c:283:42: error: incompatible type for argument 2 of ‘Passenger_getPrecio’
+  283 |                 Passenger_getPrecio(this,bufferPrice);
+      |                                          ^~~~~~~~~~~
+      |                                          |
+      |                                          float
+In file included from ../Controller.c:5:
+../Passenger.h:69:48: note: expected ‘float *’ but argument is of type ‘float’
+   69 | int Passenger_getPrecio(Passenger* this,float* precio);
+      |                                         ~~~~~~~^~~~~~
+../Controller.c:285:41: warning: format ‘%S’ expects argument of type ‘wchar_t *’, but argument 4 has type ‘char *’ [-Wformat=]
+  285 |                 printf("\n %d \t %s \t %S \t %D",bufferId,bufferName,bufferSurname,bufferPrice);
+      |                                        ~^                            ~~~~~~~~~~~~~
+      |                                         |                            |
+      |                                         int *                        char *
+      |                                        %s
+../Controller.c:285:47: warning: conversion lacks type at end of format [-Wformat=]
+  285 |                 printf("\n %d \t %s \t %S \t %D",bufferId,bufferName,bufferSurname,bufferPrice);
+      |                                               ^
+../Controller.c:285:24: warning: too many arguments for format [-Wformat-extra-args]
+  285 |                 printf("\n %d \t %s \t %S \t %D",bufferId,bufferName,bufferSurname,bufferPrice);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [subdir.mk:41: Controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+01:13:25 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+In file included from ../Controller.c:3:
+../Controller.h:13:32: error: unknown type name ‘Passenger’
+   13 | void controller_printPassenger(Passenger* this);
+      |                                ^~~~~~~~~
+../Controller.c: In function ‘controller_addPassenger’:
+../Controller.c:141:49: warning: implicit declaration of function ‘controller_PrintPassenger’; did you mean ‘controller_ListPassenger’? [-Wimplicit-function-declaration]
+  141 |                                                 controller_PrintPassenger(PassengerBuffer);
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                 controller_ListPassenger
+../Controller.c: In function ‘controller_printPassenger’:
+../Controller.c:283:42: error: incompatible type for argument 2 of ‘Passenger_getPrecio’
+  283 |                 Passenger_getPrecio(this,bufferPrice);
+      |                                          ^~~~~~~~~~~
+      |                                          |
+      |                                          float
+In file included from ../Controller.c:5:
+../Passenger.h:69:48: note: expected ‘float *’ but argument is of type ‘float’
+   69 | int Passenger_getPrecio(Passenger* this,float* precio);
+      |                                         ~~~~~~~^~~~~~
+../Controller.c:285:41: warning: format ‘%S’ expects argument of type ‘wchar_t *’, but argument 4 has type ‘char *’ [-Wformat=]
+  285 |                 printf("\n %d \t %s \t %S \t %D",bufferId,bufferName,bufferSurname,bufferPrice);
+      |                                        ~^                            ~~~~~~~~~~~~~
+      |                                         |                            |
+      |                                         int *                        char *
+      |                                        %s
+../Controller.c:285:47: warning: conversion lacks type at end of format [-Wformat=]
+  285 |                 printf("\n %d \t %s \t %S \t %D",bufferId,bufferName,bufferSurname,bufferPrice);
+      |                                               ^
+../Controller.c:285:24: warning: too many arguments for format [-Wformat-extra-args]
+  285 |                 printf("\n %d \t %s \t %S \t %D",bufferId,bufferName,bufferSurname,bufferPrice);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [subdir.mk:41: Controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+01:13:36 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+In file included from ../Controller.c:3:
+../Controller.h:13:32: error: unknown type name ‘Passenger’
+   13 | void controller_printPassenger(Passenger* this);
+      |                                ^~~~~~~~~
+../Controller.c: In function ‘controller_addPassenger’:
+../Controller.c:141:49: warning: implicit declaration of function ‘controller_PrintPassenger’; did you mean ‘controller_ListPassenger’? [-Wimplicit-function-declaration]
+  141 |                                                 controller_PrintPassenger(PassengerBuffer);
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                 controller_ListPassenger
+../Controller.c: In function ‘controller_printPassenger’:
+../Controller.c:285:41: warning: format ‘%S’ expects argument of type ‘wchar_t *’, but argument 4 has type ‘char *’ [-Wformat=]
+  285 |                 printf("\n %d \t %s \t %S \t %D",bufferId,bufferName,bufferSurname,bufferPrice);
+      |                                        ~^                            ~~~~~~~~~~~~~
+      |                                         |                            |
+      |                                         int *                        char *
+      |                                        %s
+../Controller.c:285:47: warning: conversion lacks type at end of format [-Wformat=]
+  285 |                 printf("\n %d \t %s \t %S \t %D",bufferId,bufferName,bufferSurname,bufferPrice);
+      |                                               ^
+../Controller.c:285:24: warning: too many arguments for format [-Wformat-extra-args]
+  285 |                 printf("\n %d \t %s \t %S \t %D",bufferId,bufferName,bufferSurname,bufferPrice);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [subdir.mk:41: Controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+01:14:00 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+In file included from ../Controller.c:3:
+../Controller.h:13:32: error: unknown type name ‘Passenger’
+   13 | void controller_printPassenger(Passenger* this);
+      |                                ^~~~~~~~~
+../Controller.c: In function ‘controller_addPassenger’:
+../Controller.c:141:49: warning: implicit declaration of function ‘controller_PrintPassenger’; did you mean ‘controller_ListPassenger’? [-Wimplicit-function-declaration]
+  141 |                                                 controller_PrintPassenger(PassengerBuffer);
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                 controller_ListPassenger
+make: *** [subdir.mk:41: Controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+01:14:22 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+In file included from ../Controller.c:3:
+../Controller.h:13:32: error: unknown type name ‘Passenger’
+   13 | void controller_printPassenger(Passenger* this);
+      |                                ^~~~~~~~~
+../Controller.c: In function ‘controller_addPassenger’:
+../Controller.c:141:49: warning: implicit declaration of function ‘controller_PrintPassenger’; did you mean ‘controller_ListPassenger’? [-Wimplicit-function-declaration]
+  141 |                                                 controller_PrintPassenger(PassengerBuffer);
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                 controller_ListPassenger
+make: *** [subdir.mk:41: Controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+01:15:03 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+../Controller.c:9:42: error: unknown type name ‘LinkedList’
+    9 | int controller_loadFromText(char* path , LinkedList* pArrayListPassenger)
+      |                                          ^~~~~~~~~~
+../Controller.c:101:44: error: unknown type name ‘LinkedList’
+  101 | int controller_loadFromBinary(char* path , LinkedList* pArrayListPassenger)
+      |                                            ^~~~~~~~~~
+../Controller.c:113:29: error: unknown type name ‘LinkedList’
+  113 | int controller_addPassenger(LinkedList* pArrayListPassenger)
+      |                             ^~~~~~~~~~
+../Controller.c:156:30: error: unknown type name ‘LinkedList’
+  156 | int controller_editPassenger(LinkedList* pArrayListPassenger)
+      |                              ^~~~~~~~~~
+../Controller.c:168:32: error: unknown type name ‘LinkedList’
+  168 | int controller_removePassenger(LinkedList* pArrayListPassenger)
+      |                                ^~~~~~~~~~
+../Controller.c:180:30: error: unknown type name ‘LinkedList’
+  180 | int controller_ListPassenger(LinkedList* pArrayListPassenger)
+      |                              ^~~~~~~~~~
+../Controller.c:192:30: error: unknown type name ‘LinkedList’
+  192 | int controller_sortPassenger(LinkedList* pArrayListPassenger)
+      |                              ^~~~~~~~~~
+../Controller.c:204:40: error: unknown type name ‘LinkedList’
+  204 | int controller_saveAsText(char* path , LinkedList* pArrayListPassenger)
+      |                                        ^~~~~~~~~~
+../Controller.c:216:42: error: unknown type name ‘LinkedList’
+  216 | int controller_saveAsBinary(char* path , LinkedList* pArrayListPassenger)
+      |                                          ^~~~~~~~~~
+../Controller.c:220:29: error: unknown type name ‘LinkedList’
+  220 | int controller_searchLastId(LinkedList* pArrayListPassenger)
+      |                             ^~~~~~~~~~
+../Controller.c:264:32: error: unknown type name ‘Passenger’
+  264 | void controller_printPassenger(Passenger* this)
+      |                                ^~~~~~~~~
+make: *** [subdir.mk:41: Controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+01:15:28 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+In file included from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.c:1:
+../Controller.h:1:19: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    1 | #include <stdio.h>
+      |                   ^
+../Controller.h:2:20: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    2 | #include <stdlib.h>
+      |                    ^
+../Controller.h:3:24: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    3 | #include "Controller.h"
+      |                        ^
+../Controller.h:4:24: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    4 | #include "LinkedList.h"
+      |                        ^
+../Controller.h:5:23: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    5 | #include "Passenger.h"
+      |                       ^
+../Controller.h:6:20: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    6 | #include "parser.h"
+      |                    ^
+../Controller.h:7:18: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    7 | #include "menu.h"
+      |                  ^
+../Controller.h:8:19: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    8 | #include "input.h"
+      |                   ^
+../Controller.h:10:42: error: unknown type name ‘LinkedList’
+   10 | int controller_loadFromText(char* path , LinkedList* pArrayListPassenger);
+      |                                          ^~~~~~~~~~
+../Controller.h:11:44: error: unknown type name ‘LinkedList’
+   11 | int controller_loadFromBinary(char* path , LinkedList* pArrayListPassenger);
+      |                                            ^~~~~~~~~~
+../Controller.h:12:29: error: unknown type name ‘LinkedList’
+   12 | int controller_addPassenger(LinkedList* pArrayListPassenger);
+      |                             ^~~~~~~~~~
+../Controller.h:13:30: error: unknown type name ‘LinkedList’
+   13 | int controller_editPassenger(LinkedList* pArrayListPassenger);
+      |                              ^~~~~~~~~~
+../Controller.h:14:32: error: unknown type name ‘LinkedList’
+   14 | int controller_removePassenger(LinkedList* pArrayListPassenger);
+      |                                ^~~~~~~~~~
+../Controller.h:15:30: error: unknown type name ‘LinkedList’
+   15 | int controller_ListPassenger(LinkedList* pArrayListPassenger);
+      |                              ^~~~~~~~~~
+../Controller.h:16:30: error: unknown type name ‘LinkedList’
+   16 | int controller_sortPassenger(LinkedList* pArrayListPassenger);
+      |                              ^~~~~~~~~~
+../Controller.h:17:40: error: unknown type name ‘LinkedList’
+   17 | int controller_saveAsText(char* path , LinkedList* pArrayListPassenger);
+      |                                        ^~~~~~~~~~
+../Controller.h:18:42: error: unknown type name ‘LinkedList’
+   18 | int controller_saveAsBinary(char* path , LinkedList* pArrayListPassenger);
+      |                                          ^~~~~~~~~~
+../Controller.h:19:29: error: unknown type name ‘LinkedList’
+   19 | int controller_searchLastId(LinkedList* pArrayListPassenger);
+      |                             ^~~~~~~~~~
+../Controller.h:20:32: error: unknown type name ‘Passenger’
+   20 | void controller_printPassenger(Passenger* this);
+      |                                ^~~~~~~~~
+In file included from ../Controller.h:5,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.c:1:
+../Passenger.h:7:19: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    7 | #include <stdio.h>
+      |                   ^
+../Passenger.h:8:20: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    8 | #include <stdlib.h>
+      |                    ^
+../Passenger.h:9:20: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    9 | #include <string.h>
+      |                    ^
+../Passenger.h:10:19: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   10 | #include "input.h"
+      |                   ^
+../Passenger.h:11:18: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   11 | #include "menu.h"
+      |                  ^
+In file included from ../Controller.h:7,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.c:1:
+../menu.h:18:19: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   18 | #include "input.h"
+      |                   ^
+In file included from ../Controller.h:8,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.c:1:
+../input.h:12:19: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   12 | #include <stdio.h>
+      |                   ^
+../input.h:13:20: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   13 | #include <stdlib.h>
+      |                    ^
+../input.h:14:20: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   14 | #include <string.h>
+      |                    ^
+../input.h:15:23: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   15 | #include <stdio_ext.h>
+      |                       ^
+../input.h:16:19: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   16 | #include <ctype.h>
+      |                   ^
+In file included from ../Passenger.h:9,
+                 from ../Controller.h:5,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.h:3,
+                 from ../Controller.c:1:
+/usr/include/string.h:26:36: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   26 | #include <bits/libc-header-start.h>
+      |                                    ^
+/usr/include/string.h:33:20: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+   33 | #include <stddef.h>
+      |                    ^
+/usr/include/string.h:172:34: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+  172 | # include <bits/types/locale_t.h>
+      |                                  ^
+/usr/include/string.h:175:59: error: unknown type name ‘locale_t’
+  175 | extern int strcoll_l (const char *__s1, const char *__s2, locale_t __l)
+      |                                                           ^~~~~~~~
+/usr/include/string.h:180:26: error: unknown type name ‘locale_t’
+  180 |                          locale_t __l) __THROW __nonnull ((2, 4))
+      |                          ^~~~~~~~
+/usr/include/string.h:458:40: error: unknown type name ‘locale_t’
+  458 | extern char *strerror_l (int __errnum, locale_t __l) __THROW;
+      |                                        ^~~~~~~~
+/usr/include/string.h:462:22: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+  462 | # include <strings.h>
+      |                      ^
+../Controller.c: In function ‘controller_addPassenger’:
+../Controller.c:133:49: warning: implicit declaration of function ‘controller_PrintPassenger’; did you mean ‘controller_printPassenger’? [-Wimplicit-function-declaration]
+  133 |                                                 controller_PrintPassenger(PassengerBuffer);
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                 controller_printPassenger
+make: *** [subdir.mk:41: Controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+01:16:00 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+In file included from ../Controller.c:3:
+../Controller.h:13:32: error: unknown type name ‘Passenger’
+   13 | void controller_printPassenger(Passenger* this);
+      |                                ^~~~~~~~~
+../Controller.c: In function ‘controller_addPassenger’:
+../Controller.c:141:49: warning: implicit declaration of function ‘controller_PrintPassenger’; did you mean ‘controller_ListPassenger’? [-Wimplicit-function-declaration]
+  141 |                                                 controller_PrintPassenger(PassengerBuffer);
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                 controller_ListPassenger
+make: *** [subdir.mk:41: Controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+01:16:29 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+../Controller.c: In function ‘controller_addPassenger’:
+../Controller.c:140:49: warning: implicit declaration of function ‘controller_PrintPassenger’; did you mean ‘controller_printPassenger’? [-Wimplicit-function-declaration]
+  140 |                                                 controller_PrintPassenger(PassengerBuffer);
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                 controller_printPassenger
+Finished building: ../Controller.c
+ 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: trabajo_practico_3
+Invoking: GCC C Linker
+gcc  -o "trabajo_practico_3" ./Controller.o ./Flight.o ./Passenger.o ./input.o ./main.o ./menu.o ./operations.o ./parser.o    /home/alejandro/Documentos/Estudio/tp_laboratorio_1/trabajo_practico_3/LinkedList.a
+/usr/bin/ld: ./Controller.o: en la función `controller_addPassenger':
+/home/alejandro/Documentos/Estudio/tp_laboratorio_1/trabajo_practico_3/Debug/../Controller.c:140: referencia a `controller_PrintPassenger' sin definir
+collect2: error: ld returned 1 exit status
+make: *** [makefile:45: trabajo_practico_3] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+01:16:56 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building target: trabajo_practico_3
+Invoking: GCC C Linker
+gcc  -o "trabajo_practico_3" ./Controller.o ./Flight.o ./Passenger.o ./input.o ./main.o ./menu.o ./operations.o ./parser.o    /home/alejandro/Documentos/Estudio/tp_laboratorio_1/trabajo_practico_3/LinkedList.a
+Finished building target: trabajo_practico_3
+ 
+01:17:04 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+make: No se hace nada para 'all'.
+01:21:27 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+make: No se hace nada para 'all'.
+01:44:02 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+Finished building: ../parser.c
+ 
+Building target: trabajo_practico_3
+Invoking: GCC C Linker
+gcc  -o "trabajo_practico_3" ./Controller.o ./Flight.o ./Passenger.o ./input.o ./main.o ./menu.o ./operations.o ./parser.o    /home/alejandro/Documentos/Estudio/tp_laboratorio_1/trabajo_practico_3/LinkedList.a
+Finished building target: trabajo_practico_3
+ 
+01:44:04 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+make: No se hace nada para 'all'.
+01:44:27 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: trabajo_practico_3
+Invoking: GCC C Linker
+gcc  -o "trabajo_practico_3" ./Controller.o ./Flight.o ./Passenger.o ./input.o ./main.o ./menu.o ./operations.o ./parser.o    /home/alejandro/Documentos/Estudio/tp_laboratorio_1/trabajo_practico_3/LinkedList.a
+Finished building target: trabajo_practico_3
+ 
+01:44:30 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+make: No se hace nada para 'all'.
+01:44:32 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+make: No se hace nada para 'all'.
+01:44:53 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+make: No se hace nada para 'all'.
+01:47:23 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: trabajo_practico_3
+Invoking: GCC C Linker
+gcc  -o "trabajo_practico_3" ./Controller.o ./Flight.o ./Passenger.o ./input.o ./main.o ./menu.o ./operations.o ./parser.o    /home/alejandro/Documentos/Estudio/tp_laboratorio_1/trabajo_practico_3/LinkedList.a
+Finished building target: trabajo_practico_3
+ 
+01:47:35 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+Finished building: ../parser.c
+ 
+Building target: trabajo_practico_3
+Invoking: GCC C Linker
+gcc  -o "trabajo_practico_3" ./Controller.o ./Flight.o ./Passenger.o ./input.o ./main.o ./menu.o ./operations.o ./parser.o    /home/alejandro/Documentos/Estudio/tp_laboratorio_1/trabajo_practico_3/LinkedList.a
+Finished building target: trabajo_practico_3
+ 
+01:47:37 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+make: No se hace nada para 'all'.
+01:48:57 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+make: No se hace nada para 'all'.
+01:48:58 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+make: No se hace nada para 'all'.
