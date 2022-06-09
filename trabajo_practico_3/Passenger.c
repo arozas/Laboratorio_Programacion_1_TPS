@@ -9,7 +9,8 @@
 Passenger* Passenger_new()
 {
 	Passenger* memoryPointer = NULL;
-	memoryPointer = (Passenger*) malloc(sizeof(Passenger)*2);
+	memoryPointer = (Passenger*) malloc(sizeof(Passenger)*2); //ESTA MULTIPLICACIÓN ES LO QUE ME ARREGLA EL ERROR, SIN ESA MULTIPLICACIÓN ME SALE EL ERROR: malloc(): corrupted top size
+
 	return memoryPointer;
 }
 Passenger* Passenger_newParametros(char* idStr,char* nombreStr,char*apellidoStr,char* precioStr, char* tipoPasajeroStr, char* codigoVueloStr)

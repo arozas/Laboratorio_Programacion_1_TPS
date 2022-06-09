@@ -37,6 +37,7 @@
 
 typedef struct
 {
+	int idVuelo;
 	char codigoVuelo[FLYCODE_LENGTH];
 	int estadoVuelo;
 

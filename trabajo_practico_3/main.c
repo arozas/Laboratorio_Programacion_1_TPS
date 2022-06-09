@@ -26,8 +26,6 @@ int main()
 {
 	int option = 0;
 	LinkedList* listaPasajeros = ll_newLinkedList();
-	//char* path;
-	//path =(char*)calloc(50,sizeof(char));
 	int flagLoadFile = 0;
 	do{
 		option=menu_menu("TRABAJO PRACTICO 3",

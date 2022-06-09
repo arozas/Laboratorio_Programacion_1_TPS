@@ -12,6 +12,8 @@
 		<item key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID" value="false"/>
 		<item key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID" value="false"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="/home/alejandro/Documentos/Estudio/tp_laboratorio_1/TP4/likedList_Eclipse_v9/likedList"/>
+			<item value="/home/alejandro/Documentos/Estudio/tp_laboratorio_1/TP4/likedList_Eclipse_v9"/>
 			<item value="/home/alejandro/Documentos/Estudio/tp_laboratorio_1/tp3_linux"/>
 		</list>
 	</section>

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="rtn"/>
+		<item key="selection" value="Flight"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="Passenger"/>
 			<item value="ret"/>
 			<item value="rtn"/>
 			<item value="confirmarComando"/>
@@ -22,9 +23,9 @@
 			<item value="eGen"/>
 			<item value="LOADED"/>
 			<item value="bufferList"/>
-			<item value="eFlight"/>
 		</list>
 		<list key="replacehistory">
+			<item value="Flight"/>
 			<item value="rtn"/>
 			<item value="confirm"/>
 			<item value="parser_PassengerFromText"/>
@@ -39,7 +40,6 @@
 			<item value="FALSE"/>
 			<item value="passengerBuffer"/>
 			<item value="eFlight"/>
-			<item value="emptyPassengerIndex"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
