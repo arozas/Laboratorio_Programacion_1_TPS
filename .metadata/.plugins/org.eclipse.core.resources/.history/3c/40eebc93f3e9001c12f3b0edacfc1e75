@@ -90,32 +90,32 @@ Node* test_getNode(LinkedList* this, int nodeIndex)
 static int addNode(LinkedList* this, int nodeIndex,void* pElement)
 {
 	int rtn = -1;
-	Node* pNewNode = NULL;
-	Node* pPreviousNode = NULL;
+	Node* bufferNewNode = NULL;
+	Node* bufferPreviousNode = NULL;
 
-	pNewNode = (Node*)malloc(sizeof(Node));
+	bufferNewNode = (Node*)malloc(sizeof(Node));
 
-	if(this != NULL && nodeIndex >= 0 && pNewNode != NULL)
+	if(this != NULL && nodeIndex >= 0 && bufferNewNode != NULL)
 	{
 		//Como no se donde va estar el nuevo nodo.
 		//¿Primera posició?¿Siguiente?¿última?
 		//Por eso en el buffer salvo la referencia al index
-		pNewNode->pElement = pElement;
+		bufferNewNode->pElement = pElement;
 		if(nodeIndex == 0)
 		{
-			pNewNode->pNextNode = this->pFirstNode;
-			this->pFirstNode = pNewNode;
+			bufferNewNode->pNextNode = this->pFirstNode;
+			this->pFirstNode = bufferNewNode;
 			rtn = 0;
 		}
 		else
 		{
 			//En caso que sea distinto a 0 el NODE INDEX
 			//Itero con el get Node
-			pPreviousNode = getNode(this, nodeIndex-1);
-			if(pPreviousNode!= NULL)
+			bufferPreviousNode = getNode(this, nodeIndex-1);
+			if(bufferPreviousNode!= NULL)
 			{
-				pNewNode->pNextNode = pPreviousNode->pNextNode;
-				pPreviousNode->pNextNode= pNewNode;
+				bufferNewNode->pNextNode = bufferPreviousNode->pNextNode;
+				bufferPreviousNode->pNextNode= bufferNewNode;
 				rtn = 0;
 			}
 		}
