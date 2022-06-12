@@ -1,6 +1,146 @@
-22:44:11 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+22:22:47 **** Clean-only build of configuration Debug for project trabajo_practico_3 ****
+make clean 
+rm -rf ./Controller.d ./Controller.o ./Flight.d ./Flight.o ./Passenger.d ./Passenger.o ./input.d ./input.o ./main.d ./main.o ./menu.d ./menu.o ./operations.d ./operations.o ./parser.d ./parser.o
+rm -rf trabajo_practico_3
+ 
+22:22:49 **** Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building file: ../Flight.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Flight.d" -MT"Flight.o" -o "Flight.o" "../Flight.c"
+Finished building: ../Flight.c
+ 
+Building file: ../Passenger.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Passenger.d" -MT"Passenger.o" -o "Passenger.o" "../Passenger.c"
+Finished building: ../Passenger.c
+ 
+Building file: ../input.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"input.d" -MT"input.o" -o "input.o" "../input.c"
+Finished building: ../input.c
+ 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building file: ../menu.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"menu.d" -MT"menu.o" -o "menu.o" "../menu.c"
+Finished building: ../menu.c
+ 
+Building file: ../operations.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"operations.d" -MT"operations.o" -o "operations.o" "../operations.c"
+Finished building: ../operations.c
+ 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+Finished building: ../parser.c
+ 
+Building target: trabajo_practico_3
+Invoking: GCC C Linker
+gcc  -o "trabajo_practico_3" ./Controller.o ./Flight.o ./Passenger.o ./input.o ./main.o ./menu.o ./operations.o ./parser.o    /home/alejandro/Documentos/Estudio/tp_laboratorio_1/trabajo_practico_3/LinkedList.a
+Finished building target: trabajo_practico_3
+ 
+22:26:04 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../operations.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"operations.d" -MT"operations.o" -o "operations.o" "../operations.c"
+Finished building: ../operations.c
+ 
+Building target: trabajo_practico_3
+Invoking: GCC C Linker
+gcc  -o "trabajo_practico_3" ./Controller.o ./Flight.o ./Passenger.o ./input.o ./main.o ./menu.o ./operations.o ./parser.o    /home/alejandro/Documentos/Estudio/tp_laboratorio_1/trabajo_practico_3/LinkedList.a
+Finished building target: trabajo_practico_3
+ 
+22:36:18 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+../Controller.c: In function ‘controller_saveAsText’:
+../Controller.c:758:142: error: ‘bufferPassenger’ undeclared (first use in this function); did you mean ‘bufferTypePassenger’?
+  758 |                                                         Passenger_getCodigoVuelo(pPassenger, bufferFlycode)!= 0 || Passenger_getTipoPasajero(bufferPassenger, bufferTypePassenger))
+      |                                                                                                                                              ^~~~~~~~~~~~~~~
+      |                                                                                                                                              bufferTypePassenger
+../Controller.c:758:142: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [subdir.mk:41: Controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+22:36:46 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building target: trabajo_practico_3
+Invoking: GCC C Linker
+gcc  -o "trabajo_practico_3" ./Controller.o ./Flight.o ./Passenger.o ./input.o ./main.o ./menu.o ./operations.o ./parser.o    /home/alejandro/Documentos/Estudio/tp_laboratorio_1/trabajo_practico_3/LinkedList.a
+Finished building target: trabajo_practico_3
+ 
+22:37:11 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
 make all 
 make: No se hace nada para 'all'.
-22:44:17 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+22:37:12 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+make: No se hace nada para 'all'.
+22:39:36 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building target: trabajo_practico_3
+Invoking: GCC C Linker
+gcc  -o "trabajo_practico_3" ./Controller.o ./Flight.o ./Passenger.o ./input.o ./main.o ./menu.o ./operations.o ./parser.o    /home/alejandro/Documentos/Estudio/tp_laboratorio_1/trabajo_practico_3/LinkedList.a
+Finished building target: trabajo_practico_3
+ 
+22:39:38 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+make: No se hace nada para 'all'.
+22:39:39 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+make: No se hace nada para 'all'.
+22:39:56 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building target: trabajo_practico_3
+Invoking: GCC C Linker
+gcc  -o "trabajo_practico_3" ./Controller.o ./Flight.o ./Passenger.o ./input.o ./main.o ./menu.o ./operations.o ./parser.o    /home/alejandro/Documentos/Estudio/tp_laboratorio_1/trabajo_practico_3/LinkedList.a
+Finished building target: trabajo_practico_3
+ 
+22:39:57 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+make: No se hace nada para 'all'.
+22:44:54 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building target: trabajo_practico_3
+Invoking: GCC C Linker
+gcc  -o "trabajo_practico_3" ./Controller.o ./Flight.o ./Passenger.o ./input.o ./main.o ./menu.o ./operations.o ./parser.o    /home/alejandro/Documentos/Estudio/tp_laboratorio_1/trabajo_practico_3/LinkedList.a
+Finished building target: trabajo_practico_3
+ 
+22:44:56 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+make all 
+make: No se hace nada para 'all'.
+22:46:29 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
 make all 
 make: No se hace nada para 'all'.

@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="Flight"/>
+		<item key="selection" value="EVITAR"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="EVITAR"/>
+			<item value="alpha"/>
+			<item value="strc"/>
+			<item value="idAux"/>
+			<item value="bufferId"/>
+			<item value="pEmpleado"/>
 			<item value="Passenger"/>
 			<item value="ret"/>
 			<item value="rtn"/>
@@ -17,14 +23,10 @@
 			<item value="pArrayListEmployee"/>
 			<item value="passengers"/>
 			<item value="aPossibleAlpha"/>
-			<item value="id"/>
-			<item value="array"/>
-			<item value="criterio"/>
-			<item value="eGen"/>
-			<item value="LOADED"/>
-			<item value="bufferList"/>
 		</list>
 		<list key="replacehistory">
+			<item value="bufferID"/>
+			<item value="bufferPassenger"/>
 			<item value="Flight"/>
 			<item value="rtn"/>
 			<item value="confirm"/>
@@ -38,8 +40,6 @@
 			<item value="order"/>
 			<item value="ePassenger"/>
 			<item value="FALSE"/>
-			<item value="passengerBuffer"/>
-			<item value="eFlight"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

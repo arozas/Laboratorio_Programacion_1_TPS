@@ -1,0 +1,10 @@
+22:43:27 **** Clean-only build of configuration Debug for project trabajo_practico_4 ****
+make clean 
+rm -rf ./testing/src/Employee.d ./testing/src/Employee.o ./testing/src/addNodeTest.d ./testing/src/addNodeTest.o ./testing/src/addTest.d ./testing/src/addTest.o ./testing/src/clearTest.d ./testing/src/clearTest.o ./testing/src/cloneTest.d ./testing/src/cloneTest.o ./testing/src/containsAllTest.d ./testing/src/containsAllTest.o ./testing/src/containsTest.d ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.d ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.d ./testing/src/getNodeTest.o ./testing/src/getTest.d ./testing/src/getTest.o ./testing/src/indexOfTest.d ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.d ./testing/src/isEmptyTest.o ./testing/src/lenTest.d ./testing/src/lenTest.o ./testing/src/main_test.d ./testing/src/main_test.o ./testing/src/newTest.d ./testing/src/newTest.o ./testing/src/popTest.d ./testing/src/popTest.o ./testing/src/pushTest.d ./testing/src/pushTest.o ./testing/src/removeTest.d ./testing/src/removeTest.o ./testing/src/setTest.d ./testing/src/setTest.o ./testing/src/sortTest.d ./testing/src/sortTest.o ./testing/src/subListTest.d ./testing/src/subListTest.o
+rm -rf ./testing/utest.d ./testing/utest.o
+rm -rf ./src/LinkedList.d ./src/LinkedList.o ./src/main.d ./src/main.o
+rm -rf trabajo_practico_4
+ 
+
+22:43:28 Build Finished. 0 errors, 0 warnings. (took 463ms)
+

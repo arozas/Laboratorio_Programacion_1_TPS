@@ -1,6 +1,6 @@
-22:44:17 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+22:46:29 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
 make all 
 make: No se hace nada para 'all'.
 
-22:44:17 Build Finished. 0 errors, 0 warnings. (took 468ms)
+22:46:30 Build Finished. 0 errors, 0 warnings. (took 464ms)
 

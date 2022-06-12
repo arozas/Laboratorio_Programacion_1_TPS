@@ -7,6 +7,7 @@
  *      Versión 0.4 del 14 de abril de 2022
  */
 #include "input.h"
+#include "menu.h"
 
 //********************************************************************  STATICS FUNCTIONS  ********************************************************************
 static int itsInteger(char aPossibleInteger[], int length);
@@ -377,7 +378,7 @@ int input_getStringletters(char mensaje[], int reintentos, char mensajeError[], 
 /// @param aStringIngresado
 /// @param length
 /// @return
-int input_getAlphaNumericString(char mensaje[], int reintentos, char mensajeError[], char aStringIngresado[], int length)
+int input_getAlphaNumericString(char mensaje[], int reintentos, char mensajeError[], char* aStringIngresado, int length)
 {
 	int rtn = -1; //ERROR getfloat O FUERA DE RANGO
 	char aAuxString[length]; //buffer
@@ -395,7 +396,7 @@ int input_getAlphaNumericString(char mensaje[], int reintentos, char mensajeErro
 		{
 			if (retornoGetString == 0 && strlen(aAuxString) <= length && itsAlphaNumeric(aAuxString, sizeof(aAuxString)) == 0)
 			{
-				strncpy(aStringIngresado,aAuxString,strlen(aAuxString));
+				strncpy(aStringIngresado,aAuxString,strlen(aAuxString)+1);
 				rtn = 0;
 				break;
 			}
@@ -447,30 +448,39 @@ int input_getChar(char mensaje[], int reintentos, int minimo, int maximo, char m
 	}
 	return rtn;
 }
-int input_getFileName(char* path,int fileType,int lengNombre)
+int input_setFileName(char* path,int lengNombre)
 {
 	{
 		int ret = -1;
-		__fpurge(stdin);
-		if(input_getAlphaNumericString("Ingrese el nombre del archivo", 3, "\nError, ingrese sólo nombre", path, lengNombre) == 0)
+		int fileType;
+		if(	input_getAlphaNumericString("NOMBRE DEL ARCHIVO:", 3, "ERROR. INGRESE UN NOMBRE VALIDO:", path, lengNombre) == 0)
 		{
 			strcat(path,".");
+			fileType=menu_menu("ELIJA LA EXTENSIÓN DEL ARCHIVO",
+					"\n1 - EXTENSION .CSV"
+					"\n1 - EXTENSION .BIN"
+					"\n1 - EXTENSION .TXT",
+					"ERROR, INGRESE OPCIÓN <1-3>:",
+					3,
+					3);
 			switch (fileType)
 			{
 				case 1:
-					strcat(path,"txt");
-					ret = 0;
-					break;
-				case 2:
 					strcat(path,"csv");
 					ret = 0;
 					break;
-				case 3:
+				case 2:
 					strcat(path,"bin");
 					ret = 0;
 					break;
+				case 3:
+					strcat(path,"txt");
+					ret = 0;
+					break;
 				default:
-					printf("\nError,Tipo de archivo inválido");
+					printf("\n¡ERROR! "
+							"\nVERIFIQUE QUE ESTA SELECCIONANDO "
+							"\nUNA OPCIÓN DEL MENU");
 					break;
 			}
 		}

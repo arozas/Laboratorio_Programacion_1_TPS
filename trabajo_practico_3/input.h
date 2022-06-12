@@ -21,7 +21,7 @@ int input_getFloat(char mensaje[], int reintentos, int minimo, int maximo, char 
 int input_getChar(char mensaje[], int reintentos, int minimo, int maximo, char mensajeError[], char *pCaracteringresado);
 int input_getString(char mensaje[], int reintentos, char mensajeError[], char aStringIngresado[], int lenght);
 int input_getStringletters(char mensaje[], int reintentos, char mensajeError[], char aStringIngresado[], int lenght);
-int input_getAlphaNumericString(char mensaje[], int reintentos, char mensajeError[], char aStringIngresado[], int lenght);
+int input_getAlphaNumericString(char mensaje[], int reintentos, char mensajeError[], char* aStringIngresado, int lenght);
 int input_getFileName(char* path,int fileType,int lengNombre);
 
 #endif /* INPUT_H_ */

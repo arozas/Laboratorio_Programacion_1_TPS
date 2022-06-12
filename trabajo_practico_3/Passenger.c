@@ -27,10 +27,10 @@ Passenger* Passenger_newParametros(char* idStr,char* nombreStr,char*apellidoStr,
 	{
 		if(	(Passenger_setId(newPassenger,atoi(idStr)) != 0) ||
 				(Passenger_setNombre(newPassenger,nombreStr) != 0) ||
-				(Passenger_setApellido(newPassenger,(apellidoStr)) != 0) ||
+				(Passenger_setApellido(newPassenger,apellidoStr) != 0) ||
 				(Passenger_setPrecio(newPassenger,atof(precioStr)) != 0) ||
-				(Passenger_setTipoPasajero(newPassenger,atoi(tipoPasajeroStr)) != 0) ||
-				(Passenger_setCodigoVuelo(newPassenger,(codigoVueloStr)) != 0))
+				(Passenger_setTipoPasajero(newPassenger,tipoPasajeroStr) != 0) ||
+				(Passenger_setCodigoVuelo(newPassenger,codigoVueloStr) != 0))
 		{
 			Passenger_delete(newPassenger);
 			newPassenger = NULL;
@@ -43,6 +43,8 @@ void Passenger_delete(Passenger* this)
 {
 	free(this);
 }
+//====================================================== SETTER && GETTERS ==============================================================================
+// ESTO ESTA INCOMPLETO, HAY QUE HACER TODAS LAS VALIDACIONES, NO LLEGUE HACERLAS. SE CUALES SON Y COMO HACERLAS, PERO NO LLEGUE POR TEMAS PERSONALES
 int Passenger_setId(Passenger* this,int id)
 {
 	int rtn = -1;
@@ -99,7 +101,7 @@ int Passenger_getApellido(Passenger* this,char* apellido)
 	int rtn = -1;
 	if(this != NULL &&  apellido != NULL)
 	{
-		strcpy(apellido,this->nombre);
+		strcpy(apellido,this->apellido);
 		rtn = 0;
 	}
 	return rtn;
@@ -124,22 +126,22 @@ int Passenger_getPrecio(Passenger* this,float* precio)
 	}
 	return rtn;
 }
-int Passenger_setTipoPasajero(Passenger* this, int tipoPasajero)
+int Passenger_setTipoPasajero(Passenger* this, char* tipoPasajero)
 {
 	int rtn = -1;
-	if(this != NULL && tipoPasajero > -1)
+	if(this != NULL && tipoPasajero != NULL)
 	{
-		this->tipoPasajero = tipoPasajero;
+		strcpy(this->tipoPasajero,tipoPasajero);
 		rtn = 0;
 	}
 	return rtn;
 }
-int Passenger_getTipoPasajero(Passenger* this, int* tipoPasajero)
+int Passenger_getTipoPasajero(Passenger* this, char* tipoPasajero)
 {
 	int rtn = -1;
 	if(this != NULL &&  tipoPasajero != NULL)
 	{
-		*tipoPasajero = this->tipoPasajero;
+		strcpy(tipoPasajero,this->tipoPasajero);
 		rtn = 0;
 	}
 	return rtn;
@@ -177,7 +179,7 @@ int Passenger_setData(Passenger* this)
 				&& input_getFloat("INGRESE EL PRECIO DEL VUELO:", RETRIES, MIN_PRICE, MAX_PRICE, "ERROR, INGRESE UN PRECIO VALIDO:", &PassengerBuffer.precio) == 0)
 		{
 			passengerTypeMenu=menu_menu("ELIJA EL TIPO DE PASAJERO",
-					"\n1 - EXECUTIVE_CLASS."
+					"\n1 - ECONOMY CLASS."
 					"\n2 - FIRST CLASS."
 					"\n3 - EXECUTIVE CLASS."
 					,"ERROR INTENTE DE NUEVO"
@@ -188,13 +190,13 @@ int Passenger_setData(Passenger* this)
 				switch (passengerTypeMenu)
 				{
 				case ECONOMY_CLASS:
-					PassengerBuffer.tipoPasajero=ECONOMY_CLASS;
+					strcpy(PassengerBuffer.tipoPasajero,"ECONOMY CLASS");
 					break;
 				case FIRST_CLASS:
-					PassengerBuffer.tipoPasajero=FIRST_CLASS;
+					strcpy(PassengerBuffer.tipoPasajero,"FIRST CLASS");
 					break;
 				case EXECUTIVE_CLASS:
-					PassengerBuffer.tipoPasajero=EXECUTIVE_CLASS;
+					strcpy(PassengerBuffer.tipoPasajero,"EXECUTIVE CLASS");
 					break;
 				}
 				if(Passenger_setNombre(this, PassengerBuffer.nombre)!=0 ||
@@ -218,6 +220,182 @@ int Passenger_setData(Passenger* this)
 		else
 		{
 			rtn=-2;
+		}
+	}
+	return rtn;
+}
+int Passenger_sortById(void* pElementOne,void* pElementTwo)
+{
+	int rtn = 0;
+	Passenger* passengerBufferOne;
+	Passenger* passengerBufferTwo;
+	int bufferIdOne;
+	int bufferIdTwo;
+	if(pElementOne != NULL && pElementTwo != NULL)
+	{
+		passengerBufferOne=(Passenger*)pElementOne;
+		passengerBufferTwo=(Passenger*)pElementTwo;
+		if(!Passenger_getId(passengerBufferOne,&bufferIdOne)
+				&& !Passenger_getId(passengerBufferTwo,&bufferIdTwo))
+		{
+			if(bufferIdOne > bufferIdTwo)
+			{
+				rtn = 1;
+			}
+			else
+			{
+				if(bufferIdOne <bufferIdTwo)
+				{
+					rtn = -1;
+				}
+			}
+		}
+
+	}
+	return rtn;
+}
+int Passenger_sortByName(void* pElementOne,void* pElementTwo)
+{
+	int rtn = 0;
+	Passenger* passengerBufferOne;
+	Passenger* passengerBufferTwo;
+	char bufferNameOne[NAME_LENGTH];
+	char bufferNameTwo[NAME_LENGTH];
+	if(pElementOne!=NULL && pElementTwo!=NULL)
+	{
+		passengerBufferOne = (Passenger*) pElementOne;
+		passengerBufferTwo = (Passenger*) pElementTwo;
+		if(!Passenger_getNombre(passengerBufferOne, bufferNameOne) &&
+				!Passenger_getNombre(passengerBufferTwo, bufferNameTwo))
+		{
+			if(strncmp(bufferNameOne,bufferNameTwo,NAME_LENGTH)>0)
+			{
+				rtn = 1;
+			}
+			else
+			{
+				if(strncmp(bufferNameOne,bufferNameTwo,NAME_LENGTH)<0)
+				{
+					rtn = -1;
+				}
+			}
+		}
+	}
+	return rtn;
+}
+int Passenger_sortByLastName(void* pElementOne,void* pElementTwo)
+{
+	int rtn = 0;
+	Passenger* passengerBufferOne;
+	Passenger* passengerBufferTwo;
+	char bufferSurnameOne[NAME_LENGTH];
+	char bufferSurnameTwo[NAME_LENGTH];
+	if(pElementOne!=NULL && pElementTwo!=NULL)
+	{
+		passengerBufferOne = (Passenger*) pElementOne;
+		passengerBufferTwo = (Passenger*) pElementTwo;
+		if(!Passenger_getNombre(passengerBufferOne, bufferSurnameOne) &&
+				!Passenger_getNombre(passengerBufferTwo, bufferSurnameTwo))
+		{
+			if(strncmp(bufferSurnameOne,bufferSurnameTwo,NAME_LENGTH)>0)
+			{
+				rtn = 1;
+			}
+			else
+			{
+				if(strncmp(bufferSurnameOne,bufferSurnameTwo,NAME_LENGTH)<0)
+				{
+					rtn = -1;
+				}
+			}
+		}
+	}
+	return rtn;
+}
+int Passenger_sortByPrice(void* pElementOne,void* pElementTwo)
+{
+	int rtn = 0;
+	Passenger* passengerBufferOne;
+	Passenger* passengerBufferTwo;
+	float bufferPrecioOne;
+	float bufferPrecioTwo;
+	if(pElementOne != NULL && pElementTwo != NULL)
+	{
+		passengerBufferOne=(Passenger*)pElementOne;
+		passengerBufferTwo=(Passenger*)pElementTwo;
+		if(!Passenger_getPrecio(passengerBufferOne,&bufferPrecioOne)
+				&& !Passenger_getPrecio(passengerBufferTwo,&bufferPrecioTwo))
+		{
+			if(bufferPrecioOne > bufferPrecioTwo)
+			{
+				rtn = 1;
+			}
+			else
+			{
+				if(bufferPrecioOne <bufferPrecioTwo)
+				{
+					rtn = -1;
+				}
+			}
+		}
+
+	}
+	return rtn;
+}
+int Passenger_sortByPassengerType(void* pElementOne,void* pElementTwo)
+{
+	int rtn = 0;
+	Passenger* passengerBufferOne;
+	Passenger* passengerBufferTwo;
+	char bufferTypeOne[NAME_LENGTH];
+	char bufferTypeTwo[NAME_LENGTH];
+	if(pElementOne!=NULL && pElementTwo!=NULL)
+	{
+		passengerBufferOne = (Passenger*) pElementOne;
+		passengerBufferTwo = (Passenger*) pElementTwo;
+		if(!Passenger_getTipoPasajero(passengerBufferOne, bufferTypeOne) &&
+				!Passenger_getTipoPasajero(passengerBufferTwo, bufferTypeTwo))
+		{
+			if(strncmp(bufferTypeOne,bufferTypeTwo,NAME_LENGTH)>0)
+			{
+				rtn = 1;
+			}
+			else
+			{
+				if(strncmp(bufferTypeOne,bufferTypeTwo,NAME_LENGTH)<0)
+				{
+					rtn = -1;
+				}
+			}
+		}
+	}
+	return rtn;
+}
+int Passenger_sortByFlycode(void* pElementOne,void* pElementTwo)
+{
+	int rtn = 0;
+	Passenger* passengerBufferOne;
+	Passenger* passengerBufferTwo;
+	char bufferFlycodeOne[NAME_LENGTH];
+	char bufferFlycodeTwo[NAME_LENGTH];
+	if(pElementOne!=NULL && pElementTwo!=NULL)
+	{
+		passengerBufferOne = (Passenger*) pElementOne;
+		passengerBufferTwo = (Passenger*) pElementTwo;
+		if(!Passenger_getCodigoVuelo(passengerBufferOne, bufferFlycodeOne) &&
+				!Passenger_getCodigoVuelo(passengerBufferTwo, bufferFlycodeTwo))
+		{
+			if(strncmp(bufferFlycodeOne,bufferFlycodeTwo,NAME_LENGTH)>0)
+			{
+				rtn = 1;
+			}
+			else
+			{
+				if(strncmp(bufferFlycodeOne,bufferFlycodeTwo,NAME_LENGTH)<0)
+				{
+					rtn = -1;
+				}
+			}
 		}
 	}
 	return rtn;
