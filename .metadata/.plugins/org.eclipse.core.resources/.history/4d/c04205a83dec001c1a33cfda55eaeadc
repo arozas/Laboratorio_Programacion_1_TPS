@@ -1073,12 +1073,12 @@ Passenger* controller_searchPassengerId(LinkedList* pArrayListPassenger,int idSe
 			}//FIN FOR
 			if(rtn != pPassenger)
 			{
-				printf("\nNO SE ENCONTRÓ EL ID EN LA BASE DE DATOS");
+				printf("\nNo existe el id ingresado en la base de datos");
 			}
 		}
 		else
 		{
-			printf("\nNO HAY PASAJEROS EN LA BASE DE DATOS");
+			printf("\nNo hay empleados cargados en la base de datos");
 		}
 	}
 
@@ -1198,44 +1198,5 @@ static Flight* controller_changeFlight (LinkedList* pArrayListFlights)
 	{
 		printf("\nNO SE PUDO TOMAR EL FLYCODE INGRESADO, VERIFIQUE QUE ESTAS INGRESANDO UN FLYCODE Y NO OTRO DATO");
 	}
-	return rtn;
-}
-Passenger* controller_searchPassengerDuplicatedIds(LinkedList* pArrayListPassenger,int idSearch)
-{
-	Passenger* rtn = NULL;
-	int sizeLinkedList;
-	int i;
-	int bufferIDOne;
-	int bufferIDTwo;
-	Passenger* pPassengerOne;
-	Passenger* pPassengerTwo;
-	if(pArrayListPassenger != NULL)
-	{
-		if(ll_isEmpty(pArrayListPassenger) == 0)
-		{
-			sizeLinkedList=ll_len(pArrayListPassenger);
-			for (i = 0; i < sizeLinkedList; i++)
-			{
-				pPassengerOne = (Passenger*)ll_get(pArrayListPassenger, i);
-				Passenger_getId(pPassengerOne,&bufferIDOne);
-				pPassengerTwo = (Passenger*)ll_get(pArrayListPassenger, i+1);
-				Passenger_getId(pPassengerTwo,&bufferIDTwo);
-				if(bufferIDOne == idSearch)
-				{
-					rtn = pPassengerOne;
-					break;
-				}
-			}//FIN FOR
-			if(rtn != pPassengerOne)
-			{
-				printf("\nNO SE ENCONTRÓ EL ID EN LA BASE DE DATOS");
-			}
-		}
-		else
-		{
-			printf("\nNO HAY PASAJEROS EN LA BASE DE DATOS");
-		}
-	}
-
 	return rtn;
 }

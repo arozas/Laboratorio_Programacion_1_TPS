@@ -1073,12 +1073,12 @@ Passenger* controller_searchPassengerId(LinkedList* pArrayListPassenger,int idSe
 			}//FIN FOR
 			if(rtn != pPassenger)
 			{
-				printf("\nNO SE ENCONTRÓ EL ID EN LA BASE DE DATOS");
+				printf("\nNo existe el id ingresado en la base de datos");
 			}
 		}
 		else
 		{
-			printf("\nNO HAY PASAJEROS EN LA BASE DE DATOS");
+			printf("\nNo hay pasajeros en la base de datos");
 		}
 	}
 
@@ -1228,12 +1228,12 @@ Passenger* controller_searchPassengerDuplicatedIds(LinkedList* pArrayListPasseng
 			}//FIN FOR
 			if(rtn != pPassengerOne)
 			{
-				printf("\nNO SE ENCONTRÓ EL ID EN LA BASE DE DATOS");
+				printf("\nNo existe el id ingresado en la base de datos");
 			}
 		}
 		else
 		{
-			printf("\nNO HAY PASAJEROS EN LA BASE DE DATOS");
+			printf("\nNo hay pasajeros cargados en la base de datos");
 		}
 	}
 

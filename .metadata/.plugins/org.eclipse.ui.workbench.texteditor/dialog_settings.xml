@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="EVITAR"/>
+		<item key="selection" value=""/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="empleados"/>
 			<item value="EVITAR"/>
 			<item value="alpha"/>
 			<item value="strc"/>
@@ -22,7 +23,6 @@
 			<item value="parser_EmployeeFromText"/>
 			<item value="pArrayListEmployee"/>
 			<item value="passengers"/>
-			<item value="aPossibleAlpha"/>
 		</list>
 		<list key="replacehistory">
 			<item value="bufferID"/>

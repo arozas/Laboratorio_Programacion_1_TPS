@@ -279,11 +279,16 @@ int ll_clear(LinkedList* this)
 	int rtn = -1;
 	int i;
 	if(this != NULL)
-	{
-		this->pFirstNode= NULL;
-		this->size= 0;
-		rtn = 0;
-
+	{	//recorro la lista,
+		for (i = 0; i< ll_len(this); i++)
+		{	//Si re es distinto a 0, retorno -2, si el puntero es null o menor a 0.
+			if(ll_remove(this, i) != 0)
+			{
+				rtn = -2;
+				break;
+			}
+			rtn = 0;
+		}
 	}
 	return rtn;
 }

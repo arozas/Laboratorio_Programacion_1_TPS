@@ -1,149 +1,243 @@
-22:22:47 **** Clean-only build of configuration Debug for project trabajo_practico_3 ****
-make clean 
-rm -rf ./Controller.d ./Controller.o ./Flight.d ./Flight.o ./Passenger.d ./Passenger.o ./input.d ./input.o ./main.d ./main.o ./menu.d ./menu.o ./operations.d ./operations.o ./parser.d ./parser.o
-rm -rf trabajo_practico_3
- 
-22:22:49 **** Build of configuration Debug for project trabajo_practico_3 ****
+19:45:11 **** Build of configuration Debug for project trabajo_practico_4 ****
 make all 
-Building file: ../Controller.c
+Building file: ../testing/src/Employee.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
-Finished building: ../Controller.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/Employee.d" -MT"testing/src/Employee.o" -o "testing/src/Employee.o" "../testing/src/Employee.c"
+Finished building: ../testing/src/Employee.c
  
-Building file: ../Flight.c
+Building file: ../testing/src/addNodeTest.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Flight.d" -MT"Flight.o" -o "Flight.o" "../Flight.c"
-Finished building: ../Flight.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/addNodeTest.d" -MT"testing/src/addNodeTest.o" -o "testing/src/addNodeTest.o" "../testing/src/addNodeTest.c"
+In file included from ../testing/src/addNodeTest.c:19:
+../testing/src/addNodeTest.c: In function ‘addNodeTestCase03’:
+../testing/src/../../testing/utest.h:61:127: warning: ‘
+   ’ directive writing 2 bytes into a region of size between 1 and 256 [-Wformat-overflow=]
+   61 | #define utest_assertEqualsPointerMsg(A,B,C){ if(A!=B){ utest_print2("assert equals failed '%p' != '%p'\r\n",A,B);utest_print1("%s\r\n",C); utest_flagTestError=1; utest_lineTestError = __LINE__;  utest_fileTestError = __FILENAME__;return; } }
+      |                                                                                                                               ^~~~~~~~
+../testing/src/../../testing/utest.h:27:62: note: in definition of macro ‘utest_print1’
+   27 | #define utest_print1(MSG,VAR1)   { sprintf(utest_printBuffer,MSG,VAR1); strcat(utest_printErrorBuffer,utest_printBuffer);}
+      |                                                              ^~~
+../testing/src/addNodeTest.c:91:9: note: in expansion of macro ‘utest_assertEqualsPointerMsg’
+   91 |         utest_assertEqualsPointerMsg(nodoAux->pElement,pAux[i],msg);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../testing/src/addNodeTest.c:19:
+../testing/src/../../testing/utest.h:61:130: note: format string is defined here
+   61 | #define utest_assertEqualsPointerMsg(A,B,C){ if(A!=B){ utest_print2("assert equals failed '%p' != '%p'\r\n",A,B);utest_print1("%s\r\n",C); utest_flagTestError=1; utest_lineTestError = __LINE__;  utest_fileTestError = __FILENAME__;return; } }
+      |                                                                                                                                  ^~~~
+In file included from ../testing/src/addNodeTest.c:19:
+../testing/src/../../testing/utest.h:27:36: note: ‘sprintf’ output between 3 and 258 bytes into a destination of size 256
+   27 | #define utest_print1(MSG,VAR1)   { sprintf(utest_printBuffer,MSG,VAR1); strcat(utest_printErrorBuffer,utest_printBuffer);}
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../testing/src/../../testing/utest.h:61:114: note: in expansion of macro ‘utest_print1’
+   61 | #define utest_assertEqualsPointerMsg(A,B,C){ if(A!=B){ utest_print2("assert equals failed '%p' != '%p'\r\n",A,B);utest_print1("%s\r\n",C); utest_flagTestError=1; utest_lineTestError = __LINE__;  utest_fileTestError = __FILENAME__;return; } }
+      |                                                                                                                  ^~~~~~~~~~~~
+../testing/src/addNodeTest.c:91:9: note: in expansion of macro ‘utest_assertEqualsPointerMsg’
+   91 |         utest_assertEqualsPointerMsg(nodoAux->pElement,pAux[i],msg);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../testing/src/addNodeTest.c: In function ‘addNodeTestCase05’:
+../testing/src/../../testing/utest.h:61:127: warning: ‘
+   ’ directive writing 2 bytes into a region of size between 1 and 256 [-Wformat-overflow=]
+   61 | #define utest_assertEqualsPointerMsg(A,B,C){ if(A!=B){ utest_print2("assert equals failed '%p' != '%p'\r\n",A,B);utest_print1("%s\r\n",C); utest_flagTestError=1; utest_lineTestError = __LINE__;  utest_fileTestError = __FILENAME__;return; } }
+      |                                                                                                                               ^~~~~~~~
+../testing/src/../../testing/utest.h:27:62: note: in definition of macro ‘utest_print1’
+   27 | #define utest_print1(MSG,VAR1)   { sprintf(utest_printBuffer,MSG,VAR1); strcat(utest_printErrorBuffer,utest_printBuffer);}
+      |                                                              ^~~
+../testing/src/addNodeTest.c:132:9: note: in expansion of macro ‘utest_assertEqualsPointerMsg’
+  132 |         utest_assertEqualsPointerMsg(nodoAux->pElement,pAux[i],msg);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../testing/src/addNodeTest.c:19:
+../testing/src/../../testing/utest.h:61:130: note: format string is defined here
+   61 | #define utest_assertEqualsPointerMsg(A,B,C){ if(A!=B){ utest_print2("assert equals failed '%p' != '%p'\r\n",A,B);utest_print1("%s\r\n",C); utest_flagTestError=1; utest_lineTestError = __LINE__;  utest_fileTestError = __FILENAME__;return; } }
+      |                                                                                                                                  ^~~~
+In file included from ../testing/src/addNodeTest.c:19:
+../testing/src/../../testing/utest.h:27:36: note: ‘sprintf’ output between 3 and 258 bytes into a destination of size 256
+   27 | #define utest_print1(MSG,VAR1)   { sprintf(utest_printBuffer,MSG,VAR1); strcat(utest_printErrorBuffer,utest_printBuffer);}
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../testing/src/../../testing/utest.h:61:114: note: in expansion of macro ‘utest_print1’
+   61 | #define utest_assertEqualsPointerMsg(A,B,C){ if(A!=B){ utest_print2("assert equals failed '%p' != '%p'\r\n",A,B);utest_print1("%s\r\n",C); utest_flagTestError=1; utest_lineTestError = __LINE__;  utest_fileTestError = __FILENAME__;return; } }
+      |                                                                                                                  ^~~~~~~~~~~~
+../testing/src/addNodeTest.c:132:9: note: in expansion of macro ‘utest_assertEqualsPointerMsg’
+  132 |         utest_assertEqualsPointerMsg(nodoAux->pElement,pAux[i],msg);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../testing/src/addNodeTest.c
  
-Building file: ../Passenger.c
+Building file: ../testing/src/addTest.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Passenger.d" -MT"Passenger.o" -o "Passenger.o" "../Passenger.c"
-Finished building: ../Passenger.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/addTest.d" -MT"testing/src/addTest.o" -o "testing/src/addTest.o" "../testing/src/addTest.c"
+In file included from ../testing/src/addTest.c:37:
+../testing/src/addTest.c: In function ‘addTestCase03’:
+../testing/src/../../testing/utest.h:61:127: warning: ‘
+   ’ directive writing 2 bytes into a region of size between 1 and 256 [-Wformat-overflow=]
+   61 | #define utest_assertEqualsPointerMsg(A,B,C){ if(A!=B){ utest_print2("assert equals failed '%p' != '%p'\r\n",A,B);utest_print1("%s\r\n",C); utest_flagTestError=1; utest_lineTestError = __LINE__;  utest_fileTestError = __FILENAME__;return; } }
+      |                                                                                                                               ^~~~~~~~
+../testing/src/../../testing/utest.h:27:62: note: in definition of macro ‘utest_print1’
+   27 | #define utest_print1(MSG,VAR1)   { sprintf(utest_printBuffer,MSG,VAR1); strcat(utest_printErrorBuffer,utest_printBuffer);}
+      |                                                              ^~~
+../testing/src/addTest.c:108:9: note: in expansion of macro ‘utest_assertEqualsPointerMsg’
+  108 |         utest_assertEqualsPointerMsg(nodoAux->pElement,pAux[i],msg);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../testing/src/addTest.c:37:
+../testing/src/../../testing/utest.h:61:130: note: format string is defined here
+   61 | #define utest_assertEqualsPointerMsg(A,B,C){ if(A!=B){ utest_print2("assert equals failed '%p' != '%p'\r\n",A,B);utest_print1("%s\r\n",C); utest_flagTestError=1; utest_lineTestError = __LINE__;  utest_fileTestError = __FILENAME__;return; } }
+      |                                                                                                                                  ^~~~
+In file included from ../testing/src/addTest.c:37:
+../testing/src/../../testing/utest.h:27:36: note: ‘sprintf’ output between 3 and 258 bytes into a destination of size 256
+   27 | #define utest_print1(MSG,VAR1)   { sprintf(utest_printBuffer,MSG,VAR1); strcat(utest_printErrorBuffer,utest_printBuffer);}
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../testing/src/../../testing/utest.h:61:114: note: in expansion of macro ‘utest_print1’
+   61 | #define utest_assertEqualsPointerMsg(A,B,C){ if(A!=B){ utest_print2("assert equals failed '%p' != '%p'\r\n",A,B);utest_print1("%s\r\n",C); utest_flagTestError=1; utest_lineTestError = __LINE__;  utest_fileTestError = __FILENAME__;return; } }
+      |                                                                                                                  ^~~~~~~~~~~~
+../testing/src/addTest.c:108:9: note: in expansion of macro ‘utest_assertEqualsPointerMsg’
+  108 |         utest_assertEqualsPointerMsg(nodoAux->pElement,pAux[i],msg);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../testing/src/addTest.c
  
-Building file: ../input.c
+Building file: ../testing/src/clearTest.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"input.d" -MT"input.o" -o "input.o" "../input.c"
-Finished building: ../input.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/clearTest.d" -MT"testing/src/clearTest.o" -o "testing/src/clearTest.o" "../testing/src/clearTest.c"
+Finished building: ../testing/src/clearTest.c
  
-Building file: ../main.c
+Building file: ../testing/src/cloneTest.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
-Finished building: ../main.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/cloneTest.d" -MT"testing/src/cloneTest.o" -o "testing/src/cloneTest.o" "../testing/src/cloneTest.c"
+Finished building: ../testing/src/cloneTest.c
  
-Building file: ../menu.c
+Building file: ../testing/src/containsAllTest.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"menu.d" -MT"menu.o" -o "menu.o" "../menu.c"
-Finished building: ../menu.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/containsAllTest.d" -MT"testing/src/containsAllTest.o" -o "testing/src/containsAllTest.o" "../testing/src/containsAllTest.c"
+Finished building: ../testing/src/containsAllTest.c
  
-Building file: ../operations.c
+Building file: ../testing/src/containsTest.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"operations.d" -MT"operations.o" -o "operations.o" "../operations.c"
-Finished building: ../operations.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/containsTest.d" -MT"testing/src/containsTest.o" -o "testing/src/containsTest.o" "../testing/src/containsTest.c"
+Finished building: ../testing/src/containsTest.c
  
-Building file: ../parser.c
+Building file: ../testing/src/deleteLinkedListTest.c
 Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
-Finished building: ../parser.c
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/deleteLinkedListTest.d" -MT"testing/src/deleteLinkedListTest.o" -o "testing/src/deleteLinkedListTest.o" "../testing/src/deleteLinkedListTest.c"
+Finished building: ../testing/src/deleteLinkedListTest.c
  
-Building target: trabajo_practico_3
+Building file: ../testing/src/getNodeTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/getNodeTest.d" -MT"testing/src/getNodeTest.o" -o "testing/src/getNodeTest.o" "../testing/src/getNodeTest.c"
+Finished building: ../testing/src/getNodeTest.c
+ 
+Building file: ../testing/src/getTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/getTest.d" -MT"testing/src/getTest.o" -o "testing/src/getTest.o" "../testing/src/getTest.c"
+Finished building: ../testing/src/getTest.c
+ 
+Building file: ../testing/src/indexOfTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/indexOfTest.d" -MT"testing/src/indexOfTest.o" -o "testing/src/indexOfTest.o" "../testing/src/indexOfTest.c"
+Finished building: ../testing/src/indexOfTest.c
+ 
+Building file: ../testing/src/isEmptyTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/isEmptyTest.d" -MT"testing/src/isEmptyTest.o" -o "testing/src/isEmptyTest.o" "../testing/src/isEmptyTest.c"
+Finished building: ../testing/src/isEmptyTest.c
+ 
+Building file: ../testing/src/lenTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/lenTest.d" -MT"testing/src/lenTest.o" -o "testing/src/lenTest.o" "../testing/src/lenTest.c"
+Finished building: ../testing/src/lenTest.c
+ 
+Building file: ../testing/src/main_test.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/main_test.d" -MT"testing/src/main_test.o" -o "testing/src/main_test.o" "../testing/src/main_test.c"
+Finished building: ../testing/src/main_test.c
+ 
+Building file: ../testing/src/newTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/newTest.d" -MT"testing/src/newTest.o" -o "testing/src/newTest.o" "../testing/src/newTest.c"
+Finished building: ../testing/src/newTest.c
+ 
+Building file: ../testing/src/popTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/popTest.d" -MT"testing/src/popTest.o" -o "testing/src/popTest.o" "../testing/src/popTest.c"
+Finished building: ../testing/src/popTest.c
+ 
+Building file: ../testing/src/pushTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/pushTest.d" -MT"testing/src/pushTest.o" -o "testing/src/pushTest.o" "../testing/src/pushTest.c"
+In file included from ../testing/src/pushTest.c:19:
+../testing/src/pushTest.c: In function ‘pushTestCase03’:
+../testing/src/../../testing/utest.h:61:127: warning: ‘
+   ’ directive writing 2 bytes into a region of size between 1 and 256 [-Wformat-overflow=]
+   61 | #define utest_assertEqualsPointerMsg(A,B,C){ if(A!=B){ utest_print2("assert equals failed '%p' != '%p'\r\n",A,B);utest_print1("%s\r\n",C); utest_flagTestError=1; utest_lineTestError = __LINE__;  utest_fileTestError = __FILENAME__;return; } }
+      |                                                                                                                               ^~~~~~~~
+../testing/src/../../testing/utest.h:27:62: note: in definition of macro ‘utest_print1’
+   27 | #define utest_print1(MSG,VAR1)   { sprintf(utest_printBuffer,MSG,VAR1); strcat(utest_printErrorBuffer,utest_printBuffer);}
+      |                                                              ^~~
+../testing/src/pushTest.c:91:9: note: in expansion of macro ‘utest_assertEqualsPointerMsg’
+   91 |         utest_assertEqualsPointerMsg(pElement,pAux[i],msg);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../testing/src/pushTest.c:19:
+../testing/src/../../testing/utest.h:61:130: note: format string is defined here
+   61 | #define utest_assertEqualsPointerMsg(A,B,C){ if(A!=B){ utest_print2("assert equals failed '%p' != '%p'\r\n",A,B);utest_print1("%s\r\n",C); utest_flagTestError=1; utest_lineTestError = __LINE__;  utest_fileTestError = __FILENAME__;return; } }
+      |                                                                                                                                  ^~~~
+In file included from ../testing/src/pushTest.c:19:
+../testing/src/../../testing/utest.h:27:36: note: ‘sprintf’ output between 3 and 258 bytes into a destination of size 256
+   27 | #define utest_print1(MSG,VAR1)   { sprintf(utest_printBuffer,MSG,VAR1); strcat(utest_printErrorBuffer,utest_printBuffer);}
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../testing/src/../../testing/utest.h:61:114: note: in expansion of macro ‘utest_print1’
+   61 | #define utest_assertEqualsPointerMsg(A,B,C){ if(A!=B){ utest_print2("assert equals failed '%p' != '%p'\r\n",A,B);utest_print1("%s\r\n",C); utest_flagTestError=1; utest_lineTestError = __LINE__;  utest_fileTestError = __FILENAME__;return; } }
+      |                                                                                                                  ^~~~~~~~~~~~
+../testing/src/pushTest.c:91:9: note: in expansion of macro ‘utest_assertEqualsPointerMsg’
+   91 |         utest_assertEqualsPointerMsg(pElement,pAux[i],msg);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../testing/src/pushTest.c
+ 
+Building file: ../testing/src/removeTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/removeTest.d" -MT"testing/src/removeTest.o" -o "testing/src/removeTest.o" "../testing/src/removeTest.c"
+Finished building: ../testing/src/removeTest.c
+ 
+Building file: ../testing/src/setTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/setTest.d" -MT"testing/src/setTest.o" -o "testing/src/setTest.o" "../testing/src/setTest.c"
+Finished building: ../testing/src/setTest.c
+ 
+Building file: ../testing/src/sortTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/sortTest.d" -MT"testing/src/sortTest.o" -o "testing/src/sortTest.o" "../testing/src/sortTest.c"
+Finished building: ../testing/src/sortTest.c
+ 
+Building file: ../testing/src/subListTest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/src/subListTest.d" -MT"testing/src/subListTest.o" -o "testing/src/subListTest.o" "../testing/src/subListTest.c"
+Finished building: ../testing/src/subListTest.c
+ 
+Building file: ../testing/utest.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"testing/utest.d" -MT"testing/utest.o" -o "testing/utest.o" "../testing/utest.c"
+../testing/utest.c: In function ‘utest_printStatistics’:
+../testing/utest.c:56:16: warning: format not a string literal and no format arguments [-Wformat-security]
+   56 |         printf(utest_printErrorBuffer);
+      |                ^~~~~~~~~~~~~~~~~~~~~~
+../testing/utest.c:75:12: warning: format not a string literal and no format arguments [-Wformat-security]
+   75 |     printf(utest_printErrorBuffer);
+      |            ^~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../testing/utest.c
+ 
+Building file: ../src/LinkedList.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/LinkedList.d" -MT"src/LinkedList.o" -o "src/LinkedList.o" "../src/LinkedList.c"
+Finished building: ../src/LinkedList.c
+ 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: trabajo_practico_4
 Invoking: GCC C Linker
-gcc  -o "trabajo_practico_3" ./Controller.o ./Flight.o ./Passenger.o ./input.o ./main.o ./menu.o ./operations.o ./parser.o    /home/alejandro/Documentos/Estudio/tp_laboratorio_1/trabajo_practico_3/LinkedList.a
-Finished building target: trabajo_practico_3
+gcc  -o "trabajo_practico_4" ./testing/src/Employee.o ./testing/src/addNodeTest.o ./testing/src/addTest.o ./testing/src/clearTest.o ./testing/src/cloneTest.o ./testing/src/containsAllTest.o ./testing/src/containsTest.o ./testing/src/deleteLinkedListTest.o ./testing/src/getNodeTest.o ./testing/src/getTest.o ./testing/src/indexOfTest.o ./testing/src/isEmptyTest.o ./testing/src/lenTest.o ./testing/src/main_test.o ./testing/src/newTest.o ./testing/src/popTest.o ./testing/src/pushTest.o ./testing/src/removeTest.o ./testing/src/setTest.o ./testing/src/sortTest.o ./testing/src/subListTest.o  ./testing/utest.o  ./src/LinkedList.o ./src/main.o   
+Finished building target: trabajo_practico_4
  
-22:26:04 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
-make all 
-Building file: ../operations.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"operations.d" -MT"operations.o" -o "operations.o" "../operations.c"
-Finished building: ../operations.c
- 
-Building target: trabajo_practico_3
-Invoking: GCC C Linker
-gcc  -o "trabajo_practico_3" ./Controller.o ./Flight.o ./Passenger.o ./input.o ./main.o ./menu.o ./operations.o ./parser.o    /home/alejandro/Documentos/Estudio/tp_laboratorio_1/trabajo_practico_3/LinkedList.a
-Finished building target: trabajo_practico_3
- 
-22:36:18 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
-make all 
-Building file: ../Controller.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
-../Controller.c: In function ‘controller_saveAsText’:
-../Controller.c:758:142: error: ‘bufferPassenger’ undeclared (first use in this function); did you mean ‘bufferTypePassenger’?
-  758 |                                                         Passenger_getCodigoVuelo(pPassenger, bufferFlycode)!= 0 || Passenger_getTipoPasajero(bufferPassenger, bufferTypePassenger))
-      |                                                                                                                                              ^~~~~~~~~~~~~~~
-      |                                                                                                                                              bufferTypePassenger
-../Controller.c:758:142: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [subdir.mk:41: Controller.o] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
-22:36:46 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
-make all 
-Building file: ../Controller.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
-Finished building: ../Controller.c
- 
-Building target: trabajo_practico_3
-Invoking: GCC C Linker
-gcc  -o "trabajo_practico_3" ./Controller.o ./Flight.o ./Passenger.o ./input.o ./main.o ./menu.o ./operations.o ./parser.o    /home/alejandro/Documentos/Estudio/tp_laboratorio_1/trabajo_practico_3/LinkedList.a
-Finished building target: trabajo_practico_3
- 
-22:37:11 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
-make all 
-make: No se hace nada para 'all'.
-22:37:12 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
-make all 
-make: No se hace nada para 'all'.
-22:39:36 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
-make all 
-Building file: ../Controller.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
-Finished building: ../Controller.c
- 
-Building target: trabajo_practico_3
-Invoking: GCC C Linker
-gcc  -o "trabajo_practico_3" ./Controller.o ./Flight.o ./Passenger.o ./input.o ./main.o ./menu.o ./operations.o ./parser.o    /home/alejandro/Documentos/Estudio/tp_laboratorio_1/trabajo_practico_3/LinkedList.a
-Finished building target: trabajo_practico_3
- 
-22:39:38 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
-make all 
-make: No se hace nada para 'all'.
-22:39:39 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
-make all 
-make: No se hace nada para 'all'.
-22:39:56 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
-make all 
-Building file: ../Controller.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
-Finished building: ../Controller.c
- 
-Building target: trabajo_practico_3
-Invoking: GCC C Linker
-gcc  -o "trabajo_practico_3" ./Controller.o ./Flight.o ./Passenger.o ./input.o ./main.o ./menu.o ./operations.o ./parser.o    /home/alejandro/Documentos/Estudio/tp_laboratorio_1/trabajo_practico_3/LinkedList.a
-Finished building target: trabajo_practico_3
- 
-22:39:57 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
-make all 
-make: No se hace nada para 'all'.
-22:44:54 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
-make all 
-Building file: ../Controller.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
-Finished building: ../Controller.c
- 
-Building target: trabajo_practico_3
-Invoking: GCC C Linker
-gcc  -o "trabajo_practico_3" ./Controller.o ./Flight.o ./Passenger.o ./input.o ./main.o ./menu.o ./operations.o ./parser.o    /home/alejandro/Documentos/Estudio/tp_laboratorio_1/trabajo_practico_3/LinkedList.a
-Finished building target: trabajo_practico_3
- 
-22:44:56 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
-make all 
-make: No se hace nada para 'all'.
-22:46:29 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
-make all 
-make: No se hace nada para 'all'.
-23:01:17 **** Incremental Build of configuration Debug for project trabajo_practico_3 ****
+
+19:45:13 Build Finished. 0 errors, 6 warnings. (took 2s.181ms)
+
+19:45:18 **** Incremental Build of configuration Debug for project trabajo_practico_4 ****
 make all 
 make: No se hace nada para 'all'.
